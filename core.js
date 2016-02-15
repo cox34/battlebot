@@ -1,7 +1,18 @@
 var Discord = require("discord.js");
 var Config = require("./config.json");
-var Log = require("./log.json");
 var fs = require('fs');
+
+fs.access("./log.json", fs.F_OK, function(err) {
+    if (!err) {
+			var Log = require("./log.json");
+      console.log("Log file exists.");
+    }
+		else {      
+			var Log = {"battleCount": 0};
+			fs.writeFile("log.json", JSON.stringify(Log, null, "\t"));
+			console.log("Starting new log.");
+    }
+});
 
 var bot = new Discord.Client();
 
@@ -575,7 +586,7 @@ var logs = {
 		if (!Log[loser]){Log[loser] = [0, 0];}
 		Log[winner] = [Log[winner][0]+1, Log[winner][1]+1];
 		Log[loser] = [Log[loser][0]+1, Log[loser][1]];
-		fs.writeFile("Log.json", JSON.stringify(Log, null, "\t"));
+		fs.writeFile("log.json", JSON.stringify(Log, null, "\t"));
 	}
 }
 
