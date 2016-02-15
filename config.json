@@ -1,0 +1,36 @@
+{
+	"email": "YOUR_DISCORD_EMAIL@EMAIL.COM",
+	"password": "YOUR_DISCORD_PASSWORD",
+	"enableType": true,
+	"rateCrit": 0.15,
+	"rateFail": 0.15,
+	"rateStatusEffect": 0.5,
+	"rateStatMod": 0.2,
+	"rateFlinch": 0.1,
+	"rateRecover": 0.1,
+	"modRecoil": 0.1,
+	"modRecover": 0.2,
+	"modDamage": 1,
+	"statRange": {
+		"atk": [
+			100,
+			200
+		],
+		"def": [
+			100,
+			200
+		],
+		"spe": [
+			100,
+			200
+		],
+		"spc": [
+			100,
+			200
+		],
+		"hp": [
+			400,
+			500
+		]
+	}
+}
