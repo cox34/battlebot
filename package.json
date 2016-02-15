@@ -1,0 +1,25 @@
+{
+  "name": "battlebot",
+  "version": "1.0.0",
+  "description": "battles with discord,
+  "main": "core.js",
+  "dependencies": {
+    "discord.js": "^5.1.0",
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node core.js"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {},
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "cox34",
+  "license": "GPL",
+  "bugs": {},
+  "homepage": ""
+}
