@@ -2,26 +2,33 @@ battlebot - battles with discord
 
 commands:
 
-  !battle
+  !battle : 
+  
     start or accept a battle.
     
-  !endbattle
+  !endbattle : 
+  
     end an unfinished battle.
   
-  !go <name>
+  !go <name> : 
+  
     send out a mon.
     if name is omitted, a random name will be used.
     
-  !use <attack>
+  !use <attack> : 
+  
     use an attack.
     if attack is omitted, 'attack' will be used.
   
-  !battlestats <@name>
+  !battlestats <@name> : 
+  
     displays games played for a particular user.
     if @name is omitted, displays total games played.
   
-  !battleconfig <variable>, <value>
+  !battleconfig <variable>, <value> : 
+  
     modify game variables without reloading the script.
     
-  !help
+  !help : 
+  
     display basic commands. 
