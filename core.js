@@ -1,14 +1,15 @@
 var Discord = require("discord.js");
 var Config = require("./config.json");
 var fs = require('fs');
+var Log = null;
 
 fs.access("./log.json", fs.F_OK, function(err) {
     if (!err) {
-			var Log = require("./log.json");
+			Log = require("./log.json");
       console.log("Log file exists.");
     }
 		else {      
-			var Log = {"battleCount": 0};
+			Log = {"battleCount": 0};
 			fs.writeFile("log.json", JSON.stringify(Log, null, "\t"));
 			console.log("Starting new log.");
     }
@@ -40,10 +41,10 @@ var typesMatch =
 	];
 var msgType;
 var msgCrit;
-var cheat;
 
 bot.on("ready", () => {
 	console.log("Started successfully. Serving in " + bot.servers.length + " servers");
+	console.log(Log);
 });
 
 bot.on("message", msg => {
@@ -91,6 +92,7 @@ var commands = {
 			if(l === 0){
 				games[msg.channel.id].players.push({"name": msg.author.username, "id": "<@" + msg.author.id + ">"});
 				bot.sendMessage(msg.channel.id, msg.author + " challenges someone to battle!\n(!battle, !go <name>, !use <attack>)");
+				console.log(msg.author.username + " started a battle.");
 			}
 			else if(l === 1 && games[msg.channel.id].players[0].name !== msg.author.username){
 				games[msg.channel.id].players.push({"name": msg.author.username, "id": "<@" + msg.author.id + ">"});
@@ -169,7 +171,7 @@ var commands = {
 		process: function(bot, msg, suffix) {
 			//console.log(msg.author.id);
 			//console.log(msg.author.equals(Log));
-			if (msg.author.id === "130551383609966592") {
+			//if (msg.author.id === Config.id) {
 				var key = suffix.split(",")[0];
 				var value = suffix.split(",")[1];
 				if (Config[key] !== undefined) { // !battleconfig statRange,atk,100,200
@@ -199,11 +201,11 @@ var commands = {
 					//console.log("Change failed. Undefined key.");
 					bot.sendMessage(msg.channel.id, "Change failed. Undefined key.");
 				}
-			}
+			/* }
 			else {
 				//console.log("Unauthorized");
 				bot.sendMessage(msg.channel.id, "Unauthorized");
-			}
+			} */
 		}
 	},
 	"battlestats": {
@@ -219,12 +221,6 @@ var commands = {
 			else {
 				bot.sendMessage(msg.channel.id, Log.battleCount + " battles have been fought.");
 			}
-		}
-	},
-	"cheatdmg": {
-		process: function(bot, msg, suffix) {
-			cheat = parseInt(suffix, 10);
-			console.log("Damage set to " + cheat);
 		}
 	}
 };
@@ -310,10 +306,6 @@ var game = {
 								default: 
 									attack.damage = Math.floor(((0.84 * attack.power * (offMon.atk * stats.get(offMon, "atk")) / (defMon.def * stats.get(defMon, "def"))) + 2) * damage.crit(offMon) * (Math.random() * 39 + 85) / 100 * damage.stab(offMon.type, attack.type) * damage.type(attack.type, defMon.type) * Config.modDamage);
 									break;
-							}
-							if (cheat) {
-								attack.damage = cheat;
-								cheat = null;
 							}
 							defMon.hp - attack.damage < 0 ? defMon.hp = 0 : defMon.hp -= attack.damage;
 							games[channel].queue += msgCrit + msgType + offMon.name + "\'s **" + atkName + "** did " + attack.damage + " damage!" + "\n" + game.displayHp(defMon) + "\n";
@@ -582,6 +574,7 @@ var statuses = {
 var logs = {
 	"set": function (winner, loser) {
 		Log.battleCount += 1;
+		console.log("battleCount: " + Log.battleCount);
 		if (!Log[winner]){Log[winner] = [0, 0];}
 		if (!Log[loser]){Log[loser] = [0, 0];}
 		Log[winner] = [Log[winner][0]+1, Log[winner][1]+1];
