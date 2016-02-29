@@ -6,7 +6,7 @@ var Log = null;
 fs.access("./log.json", fs.F_OK, function(err) {
     if (!err) {
 			Log = require("./log.json");
-      console.log("Log file exists.");
+			console.log("Log file exists.");
     }
 		else {      
 			Log = {"battleCount": 0};
