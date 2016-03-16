@@ -1,8 +1,10 @@
 var Discord = require("discord.js");
 var Config = require("./config.json");
+var Trans = require("./translation.json");
 var fs = require('fs');
-var Log = null;
+var bot = new Discord.Client();
 
+var Log;
 fs.access("./log.json", fs.F_OK, function(err) {
     if (!err) {
 			Log = require("./log.json");
@@ -14,8 +16,6 @@ fs.access("./log.json", fs.F_OK, function(err) {
 			console.log("Starting new log.");
     }
 });
-
-var bot = new Discord.Client();
 
 var games = {};
 var types = ["Normal","Fire","Water","Electric","Grass","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel"];
@@ -44,7 +44,7 @@ var msgCrit;
 
 bot.on("ready", () => {
 	console.log("Started successfully. Serving in " + bot.servers.length + " servers");
-	console.log(Log);
+	console.log("Translation loaded. Using " + Config.lang);
 });
 
 bot.on("message", msg => {
@@ -57,18 +57,16 @@ bot.on("message", msg => {
 			if (!games[msg.channel.id]) {
 				if (command === "go" || command === "use") {
 					//console.log("No game instance."); 
-					return;
+					return null;
 				}
 			}
 			else if (games[msg.channel.id]) {
 				if((command === "go" || command === "use") && command !== "battle"){
 					if (msg.author.username === games[msg.channel.id].players[0].name) {
 						games[msg.channel.id].origin = 0;
-						//console.log("Origin set to 0");
 					}
 					else if (games[msg.channel.id].players[1] && msg.author.username === games[msg.channel.id].players[1].name) {
 						games[msg.channel.id].origin = 1;
-						//console.log("Origin set to 1");
 					}
 					else {
 						bot.sendMessage(msg.channel.id, "You are not a part of this battle."); 
@@ -81,7 +79,6 @@ bot.on("message", msg => {
 	}
 });
 
-
 var commands = {	
 	"battle": {
 		process: function(bot, msg, suffix) {
@@ -91,15 +88,16 @@ var commands = {
 			l = games[msg.channel.id].players.length;
 			if(l === 0){
 				games[msg.channel.id].players.push({"name": msg.author.username, "id": "<@" + msg.author.id + ">"});
-				bot.sendMessage(msg.channel.id, msg.author + " challenges someone to battle!\n(!battle, !go <name>, !use <attack>)");
+				//bot.sendMessage(msg.channel.id, msg.author + " challenges someone to battle!\n(!battle, !go <name>, !use <attack>)");
+				bot.sendMessage(msg.channel.id, Trans[Config.lang].battleChallenge.replace(/_PLAYER0_/g, msg.author.username));
 				console.log(msg.author.username + " started a battle.");
 			}
 			else if(l === 1 && games[msg.channel.id].players[0].name !== msg.author.username){
 				games[msg.channel.id].players.push({"name": msg.author.username, "id": "<@" + msg.author.id + ">"});
-				bot.sendMessage(msg.channel.id, msg.author + " has accepted the challenge!");
+				bot.sendMessage(msg.channel.id, Trans[Config.lang].battleAccept.replace(/_PLAYER0_/g, msg.author.username));
 			}
 			else if(l === 2){
-				bot.sendMessage(msg.channel.id, "There is already an ongoing battle between " + games[msg.channel.id].players[0].name + " and " + games[msg.channel.id].players[1].name + ".");
+				bot.sendMessage(msg.channel.id, Trans[Config.lang].battleExists.replace(/_PLAYER0_/g, games[msg.channel.id].players[0].name).replace(/_PLAYER1_/g, games[msg.channel.id].players[1].name));
 			}
 		}
 	},
@@ -110,7 +108,7 @@ var commands = {
 					suffix = "Mon" + Math.floor(Math.random() * 100);
 				}
 				games[msg.channel.id].players[games[msg.channel.id].origin].mon = new game.createMon(suffix);
-				var send = msg.author + " called out **" + suffix + "**." + 
+				var send = Trans[Config.lang].goMon.replace(/_PLAYER0_/g, msg.author.username).replace(/_MON0_/g, suffix) + 
 					"\n**ATK**: " + games[msg.channel.id].players[games[msg.channel.id].origin].mon.atk + 
 					",\n**DEF**: " + games[msg.channel.id].players[games[msg.channel.id].origin].mon.def + 
 					",\n**SPE**: " + games[msg.channel.id].players[games[msg.channel.id].origin].mon.spe + 
@@ -119,7 +117,7 @@ var commands = {
 					",\n**Type**: " + game.displayType(games[msg.channel.id].players[games[msg.channel.id].origin].mon.type);
 				if(games[msg.channel.id].turn === -1 && games[msg.channel.id].players[1] && games[msg.channel.id].players[1].mon && games[msg.channel.id].players[0].mon) {
 					games[msg.channel.id].turn = (games[msg.channel.id].players[0].mon.spe >= games[msg.channel.id].players[1].mon.spe ? 0 : 1);
-					send += "\n" + games[msg.channel.id].players[games[msg.channel.id].turn].mon.name + " is first.";
+					send += "\n" + Trans[Config.lang].goIsFirst.replace(/_MON0_/g, games[msg.channel.id].players[games[msg.channel.id].turn].mon.name);
 				}
 				bot.sendMessage(msg.channel.id, send);
 			}
@@ -146,7 +144,7 @@ var commands = {
 				}
 			}
 			else {
-				bot.sendMessage(msg.channel.id, "It's not your turn.");
+				bot.sendMessage(msg.channel.id, Trans[Config.lang].useNotYourTurn);
 			}
 		}
 	}, 
@@ -161,10 +159,7 @@ var commands = {
 	"endbattle": {
 		process: function(bot, msg, suffix) {
 			game.endGame([msg.channel.id]);
-			bot.sendMessage(
-			  msg.channel.id, 
-			  "Battle ended by " + msg.author.username
-			);
+			bot.sendMessage(msg.channel.id, Trans[Config.lang].endGame.replace(/_PLAYER0_/g, msg.author.username));
 		}
 	},
 	"battleconfig": {
