@@ -1,6 +1,7 @@
 {
 	"email": "YOUR_DISCORD_EMAIL@EMAIL.COM",
 	"password": "YOUR_DISCORD_PASSWORD",
+	"lang": "en",
 	"enableType": true,
 	"rateCrit": 0.15,
 	"rateFail": 0.15,
