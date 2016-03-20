@@ -5,7 +5,8 @@ var fs = require('fs');
 var bot = new Discord.Client();
 
 var Log;
-fs.access("./log.json", fs.F_OK, function(err) {
+fs.access("./log.json", fs.F_OK, 
+	function(err) {
     if (!err) {
 			Log = require("./log.json");
 			console.log("Log file exists.");
@@ -15,7 +16,8 @@ fs.access("./log.json", fs.F_OK, function(err) {
 			fs.writeFile("log.json", JSON.stringify(Log, null, "\t"));
 			console.log("Starting new log.");
     }
-});
+	}
+);
 
 var games = {};
 var types = ["Normal","Fire","Water","Electric","Grass","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel"];
@@ -69,7 +71,7 @@ bot.on("message", msg => {
 						games[msg.channel.id].origin = 1;
 					}
 					else {
-						bot.sendMessage(msg.channel.id, "You are not a part of this battle."); 
+						bot.sendMessage(msg.channel.id, Trans[Config.lang].cmdDeny); 
 						return;
 					}
 				}
@@ -162,59 +164,18 @@ var commands = {
 			bot.sendMessage(msg.channel.id, Trans[Config.lang].endGame.replace(/_PLAYER0_/g, msg.author.username));
 		}
 	},
-	"battleconfig": {
-		process: function(bot, msg, suffix) {
-			//console.log(msg.author.id);
-			//console.log(msg.author.equals(Log));
-			//if (msg.author.id === Config.id) {
-				var key = suffix.split(",")[0];
-				var value = suffix.split(",")[1];
-				if (Config[key] !== undefined) { // !battleconfig statRange,atk,100,200
-					if (key === "statRange") {
-						var stat = suffix.split(",")[1];
-						var min = parseInt(suffix.split(",")[2], 10);
-						var max = parseInt(suffix.split(",")[3], 10);
-						var prev = Config[key][stat][0] + "," + Config[key][stat][1];
-						Config[key][stat] = [min, max];
-						key = key + "." + stat;
-						value = min + "," + max;
-					}
-					else {
-						switch (value) {
-							case "true": value = true; break;
-							case "false": value = false; break;
-							default: value = parseFloat(value); break;
-						} 
-						var prev = Config[key];
-						Config[key] = value;
-					}
-					fs.writeFile("Config.json", JSON.stringify(Config, null, "\t"));
-					//console.log("Config." + key + " changed from " + prev + " to " + value + ".");
-					bot.sendMessage(msg.channel.id, "Config." + key + " changed from " + prev + " to " + value + ".");
-				}
-				else {
-					//console.log("Change failed. Undefined key.");
-					bot.sendMessage(msg.channel.id, "Change failed. Undefined key.");
-				}
-			/* }
-			else {
-				//console.log("Unauthorized");
-				bot.sendMessage(msg.channel.id, "Unauthorized");
-			} */
-		}
-	},
 	"battlestats": {
 		process: function(bot, msg, suffix) {
 			if(suffix){
 				if (Log[suffix]) {
-					bot.sendMessage(msg.channel.id, suffix + " has fought " + Log[suffix][0] + " battles and won " + Log[suffix][1] + " battles.");
+					bot.sendMessage(msg.channel.id, Trans[Config.lang].recordStats.replace(/_PLAYER0_/g, suffix).replace(/_NUM0_/g, Log[suffix][0]).replace(/_NUM1_/g, Log[suffix][1]));
 				}
 				else {
-					bot.sendMessage(msg.channel.id, "That user has not fought any battles.");
+					bot.sendMessage(msg.channel.id, Trans[Config.lang].recordNone);
 				}
 			}
 			else {
-				bot.sendMessage(msg.channel.id, Log.battleCount + " battles have been fought.");
+				bot.sendMessage(msg.channel.id, Trans[Config.lang].recordTotal.replace(/_NUM0_/g, Log.battleCount));
 			}
 		}
 	}

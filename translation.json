@@ -1,6 +1,7 @@
 {
 		"en":
 		 {
+			"cmdDeny":					"You are not a part of this battle.",
 			"battleChallenge":		"_PLAYER0_ challenges someone to battle!\n(!battle, !go <name>, !use <attack>)",
 			"battleAccept": 			"_PLAYER0_ has accepted the challenge!",
 			"battleExists":				"There is already an ongoing battle between _PLAYER0_ and _PLAYER1_.",
@@ -10,7 +11,9 @@
 			"endGame":						"Battle ended by _PLAYER0_.",
 			"battleStatsUser":		"_PLAYER0_ has fought _NUM0_ battles and won _NUM1_ battles.",
 			"battleStatsNone":		"That user has not fought any battles.",
-			"battleStatsTotal":		"_NUM0_ battles have been fought."
-			
+			"battleStatsTotal":		"_NUM0_ battles have been fought.",
+			"recordStats":				"_PLAYER0 has fought _NUM0_ battles and won _NUM1_ battles.",
+			"recordNone":					"That user has not fought any battles.",
+			"recordTotal":				"_NUM0_ battles have been fought."
 		 }
 }
