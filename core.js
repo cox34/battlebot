@@ -7,15 +7,15 @@ var bot = new Discord.Client();
 var Log;
 fs.access("./log.json", fs.F_OK, 
 	function(err) {
-    if (!err) {
+		if (!err) {
 			Log = require("./log.json");
 			console.log("Log file exists.");
-    }
+		}
 		else {      
 			Log = {"battleCount": 0};
 			fs.writeFile("log.json", JSON.stringify(Log, null, "\t"));
 			console.log("Starting new log.");
-    }
+		}
 	}
 );
 
