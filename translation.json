@@ -1,0 +1,16 @@
+{
+		"en":
+		 {
+			"battleChallenge":		"_PLAYER0_ challenges someone to battle!\n(!battle, !go <name>, !use <attack>)",
+			"battleAccept": 			"_PLAYER0_ has accepted the challenge!",
+			"battleExists":				"There is already an ongoing battle between _PLAYER0_ and _PLAYER1_.",
+			"goMon":							"_PLAYER0_ called out _MON0_.",
+			"goIsFirst":					"_MON0_ is first.",
+			"useNotYourTurn":			"It's not your turn.",
+			"endGame":						"Battle ended by _PLAYER0_.",
+			"battleStatsUser":		"_PLAYER0_ has fought _NUM0_ battles and won _NUM1_ battles.",
+			"battleStatsNone":		"That user has not fought any battles.",
+			"battleStatsTotal":		"_NUM0_ battles have been fought."
+			
+		 }
+}
