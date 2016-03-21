@@ -1,19 +1,62 @@
 {
 		"en":
 		 {
-			"cmdDeny":					"You are not a part of this battle.",
-			"battleChallenge":		"_PLAYER0_ challenges someone to battle!\n(!battle, !go <name>, !use <attack>)",
+			"types": 							["Normal","Fire","Water","Electric","Grass","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel"],
+			
+			"cmdDeny":						"You are not a part of this battle.",
+			"battleChallenge":		"_PLAYER0_ challenges someone to battle! \n(!battle, !go <name>, !use <attack>)",
 			"battleAccept": 			"_PLAYER0_ has accepted the challenge!",
 			"battleExists":				"There is already an ongoing battle between _PLAYER0_ and _PLAYER1_.",
 			"goMon":							"_PLAYER0_ called out _MON0_.",
 			"goIsFirst":					"_MON0_ is first.",
 			"useNotYourTurn":			"It's not your turn.",
 			"endGame":						"Battle ended by _PLAYER0_.",
-			"battleStatsUser":		"_PLAYER0_ has fought _NUM0_ battles and won _NUM1_ battles.",
-			"battleStatsNone":		"That user has not fought any battles.",
-			"battleStatsTotal":		"_NUM0_ battles have been fought.",
+			
 			"recordStats":				"_PLAYER0 has fought _NUM0_ battles and won _NUM1_ battles.",
 			"recordNone":					"That user has not fought any battles.",
-			"recordTotal":				"_NUM0_ battles have been fought."
-		 }
+			"recordTotal":				"_NUM0_ battles have been fought.",
+			
+			"atkDefault":					"attack",
+			"atkFail":						"_MON0_'s _ATTACK_ missed!",
+			"atkDamage":					"_MON0_'s _ATTACK_ did _NUM0_ damage!",
+			"atkRecover":					"_MON0_ recovered _NUM0_ health!",
+			"atkRecoil":					"_MON0_ took _NUM0_ recoil damage!",
+			"atkFlinch":					"_MON0_ flinched!",
+			"gameOver":						"Congratulations, **_PLAYER0_**, you've defeated **_PLAYER1_**!",
+			"atkCrit":						"Critical hit!",
+			"atkVeryEff":					"It's very effective!",
+			"atkNotVeryEff":			"It's not very effective...",
+			
+			"statusSlp":					"_MON0_ fell asleep!",
+			"statusBrn":					"_MON0_ was burned!",
+			"statusPsn":					"_MON0_ was poisoned!",
+			"statusPrz":					"_MON0_ was paralyzed!",
+			"statusFrz":					"_MON0_ was frozen!",
+			"statusCfs":					"_MON0_ became confused!",
+			"statusLov":					"_MON0_ fell in love!",
+						
+			"statusContSlp":			"_MON0_ is asleep!",
+			"statusContBrn":			"_MON0_ is hurt by the burn!",
+			"statusContPsn":			"_MON0_ is hurt by the poison!",
+			"statusContPrz":			"_MON0_ is completely paralyzed!",
+			"statusContFrz":			"_MON0_ is frozen solid!",
+			"statusContCfs":			"_MON0_ hurt itself in its confusion!",
+			"statusContLov":			"_MON0_ is immobilized by love!",
+			
+			"statusHealSlp":			"_MON0_ woke up!",
+			"statusHealPrz":			"_MON0_ overcame its paralysis!",
+			"statusHealFrz":			"_MON0_ defrosted!",
+			"statusHealCfs":			"_MON0_ snapped out of its confusion!",
+			
+			"statsAbs":						"_MON0_'s _STAT_ went to _NUM0_!",
+			"statsRelUp":					"_MON0_'s _STAT_ increased by _NUM0_!",
+			"statsRelDn":					"_MON0_'s _STAT_ decreased by _NUM0_!",
+			"statsPerUp":					"_MON0_'s _STAT_ increased by _NUM0_%!",
+			"statsPerDn":					"_MON0_'s _STAT_ decreased by _NUM0_%!"
+		 },
+		 
+		"lang2":
+			{
+			
+			}
 }

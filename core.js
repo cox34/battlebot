@@ -20,7 +20,7 @@ fs.access("./log.json", fs.F_OK,
 );
 
 var games = {};
-var types = ["Normal","Fire","Water","Electric","Grass","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel"];
+var types = Trans[Config.lang].types;
 var typesMatch = 
 	[
 		[1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1],
@@ -46,7 +46,7 @@ var msgCrit;
 
 bot.on("ready", () => {
 	console.log("Started successfully. Serving in " + bot.servers.length + " servers");
-	console.log("Translation loaded. Using " + Config.lang);
+	console.log("Using " + Config.lang + " translation");
 });
 
 bot.on("message", msg => {
@@ -90,16 +90,15 @@ var commands = {
 			l = games[msg.channel.id].players.length;
 			if(l === 0){
 				games[msg.channel.id].players.push({"name": msg.author.username, "id": "<@" + msg.author.id + ">"});
-				//bot.sendMessage(msg.channel.id, msg.author + " challenges someone to battle!\n(!battle, !go <name>, !use <attack>)");
-				bot.sendMessage(msg.channel.id, Trans[Config.lang].battleChallenge.replace(/_PLAYER0_/g, msg.author.username));
+				bot.sendMessage(msg.channel.id, Trans[Config.lang].battleChallenge.replace(/_PLAYER0_/, msg.author.username));
 				console.log(msg.author.username + " started a battle.");
 			}
 			else if(l === 1 && games[msg.channel.id].players[0].name !== msg.author.username){
 				games[msg.channel.id].players.push({"name": msg.author.username, "id": "<@" + msg.author.id + ">"});
-				bot.sendMessage(msg.channel.id, Trans[Config.lang].battleAccept.replace(/_PLAYER0_/g, msg.author.username));
+				bot.sendMessage(msg.channel.id, Trans[Config.lang].battleAccept.replace(/_PLAYER0_/, msg.author.username));
 			}
 			else if(l === 2){
-				bot.sendMessage(msg.channel.id, Trans[Config.lang].battleExists.replace(/_PLAYER0_/g, games[msg.channel.id].players[0].name).replace(/_PLAYER1_/g, games[msg.channel.id].players[1].name));
+				bot.sendMessage(msg.channel.id, Trans[Config.lang].battleExists.replace(/_PLAYER0_/, games[msg.channel.id].players[0].name).replace(/_PLAYER1_/, games[msg.channel.id].players[1].name));
 			}
 		}
 	},
@@ -110,7 +109,7 @@ var commands = {
 					suffix = "Mon" + Math.floor(Math.random() * 100);
 				}
 				games[msg.channel.id].players[games[msg.channel.id].origin].mon = new game.createMon(suffix);
-				var send = Trans[Config.lang].goMon.replace(/_PLAYER0_/g, msg.author.username).replace(/_MON0_/g, suffix) + 
+				var send = Trans[Config.lang].goMon.replace(/_PLAYER0_/, msg.author.username).replace(/_MON0_/, suffix) + 
 					"\n**ATK**: " + games[msg.channel.id].players[games[msg.channel.id].origin].mon.atk + 
 					",\n**DEF**: " + games[msg.channel.id].players[games[msg.channel.id].origin].mon.def + 
 					",\n**SPE**: " + games[msg.channel.id].players[games[msg.channel.id].origin].mon.spe + 
@@ -119,7 +118,7 @@ var commands = {
 					",\n**Type**: " + game.displayType(games[msg.channel.id].players[games[msg.channel.id].origin].mon.type);
 				if(games[msg.channel.id].turn === -1 && games[msg.channel.id].players[1] && games[msg.channel.id].players[1].mon && games[msg.channel.id].players[0].mon) {
 					games[msg.channel.id].turn = (games[msg.channel.id].players[0].mon.spe >= games[msg.channel.id].players[1].mon.spe ? 0 : 1);
-					send += "\n" + Trans[Config.lang].goIsFirst.replace(/_MON0_/g, games[msg.channel.id].players[games[msg.channel.id].turn].mon.name);
+					send += "\n" + Trans[Config.lang].goIsFirst.replace(/_MON0_/, games[msg.channel.id].players[games[msg.channel.id].turn].mon.name);
 				}
 				bot.sendMessage(msg.channel.id, send);
 			}
@@ -161,21 +160,21 @@ var commands = {
 	"endbattle": {
 		process: function(bot, msg, suffix) {
 			game.endGame([msg.channel.id]);
-			bot.sendMessage(msg.channel.id, Trans[Config.lang].endGame.replace(/_PLAYER0_/g, msg.author.username));
+			bot.sendMessage(msg.channel.id, Trans[Config.lang].endGame.replace(/_PLAYER0_/, msg.author.username));
 		}
 	},
 	"battlestats": {
 		process: function(bot, msg, suffix) {
 			if(suffix){
 				if (Log[suffix]) {
-					bot.sendMessage(msg.channel.id, Trans[Config.lang].recordStats.replace(/_PLAYER0_/g, suffix).replace(/_NUM0_/g, Log[suffix][0]).replace(/_NUM1_/g, Log[suffix][1]));
+					bot.sendMessage(msg.channel.id, Trans[Config.lang].recordStats.replace(/_PLAYER0_/, suffix).replace(/_NUM0_/, Log[suffix][0]).replace(/_NUM1_/, Log[suffix][1]));
 				}
 				else {
 					bot.sendMessage(msg.channel.id, Trans[Config.lang].recordNone);
 				}
 			}
 			else {
-				bot.sendMessage(msg.channel.id, Trans[Config.lang].recordTotal.replace(/_NUM0_/g, Log.battleCount));
+				bot.sendMessage(msg.channel.id, Trans[Config.lang].recordTotal.replace(/_NUM0_/, Log.battleCount));
 			}
 		}
 	}
@@ -205,7 +204,7 @@ var game = {
 		if (statuses.checkStart(offMon, channel) === 1) {
 			var attack = {};
 			if(atkName === ""){
-				atkName = "attack";
+				atkName = Trans[Config.lang].atkDefault;
 			}
 			attack.effect = "d";
 			//attack.acc = game.occurRate(defMon, Config.rateFail, "spe");
@@ -229,7 +228,7 @@ var game = {
 
 			
 			if (attack.failed === true && attack.effect.indexOf("d") >= 0) {
-				games[channel].queue += offMon.name + "\'s **" + atkName + "** missed!\n";
+				games[channel].queue += Trans[Config.lang].atkFail.replace(/_MON0_/, offMon.name).replace(/_ATTACK_/, atkName) + "\n";
 			}
 			/*
 			;Parameters
@@ -264,12 +263,12 @@ var game = {
 									break;
 							}
 							defMon.hp - attack.damage < 0 ? defMon.hp = 0 : defMon.hp -= attack.damage;
-							games[channel].queue += msgCrit + msgType + offMon.name + "\'s **" + atkName + "** did " + attack.damage + " damage!" + "\n" + game.displayHp(defMon) + "\n";
+							games[channel].queue += msgCrit + msgType + Trans[Config.lang].atkDamage.replace(/_MON0_/, offMon.name).replace(/_ATTACK_/, atkName).replace(/_NUM0_/, attack.damage) + "\n" + game.displayHp(defMon) + "\n";
 							break;
 						case "h":
 							var heal = Math.ceil((eff[i].charAt(1) === "0" ? offMon.hpmax : attack.damage) * parseFloat(eff[i].slice(2)));
 							offMon.hp = offMon.hp + heal > offMon.hpmax ? offMon.hpmax : offMon.hp + heal;
-							games[channel].queue += offMon.name + " recovered " + heal + " HP!\n" + game.displayHp(offMon) + "\n";
+							games[channel].queue += Trans[Config.lang].atkRecover.replace(/_MON0_/, offMon.name).replace(/_NUM0_/, heal) + "\n" + game.displayHp(offMon) + "\n";
 							break;
 						case "m":
 							if(parseFloat(eff[i].slice(3).match(/^.*[\+\-]/gi)[0].replace(/[\+\-]/gi, "")) > Math.random()) {
@@ -282,7 +281,7 @@ var game = {
 						case "r":
 							var recoil = Math.ceil((eff[i].charAt(1) === "0" ? attack.damage : offMon.hp) * parseFloat(eff[i].slice(2)));
 							offMon.hp = offMon.hp - recoil < 0 ? 0 : offMon.hp - recoil;
-							games[channel].queue += offMon.name + " took " + recoil + " recoil damage!\n" + game.displayHp(offMon) + "\n";
+							games[channel].queue += Trans[Config.lang].atkRecoil.replace(/_MON0_/, offMon.name).replace(/_NUM0_/, recoil) + "\n" + game.displayHp(offMon) + "\n";
 							break;
 						case "s":
 							if(parseFloat(eff[i].slice(3)) > Math.random()) {
@@ -291,7 +290,7 @@ var game = {
 							break;
 						case "f":
 							if(parseFloat(eff[i].slice(1)) > Math.random()) {
-								games[channel].queue += defMon.name + " flinched!\n";
+								games[channel].queue += Trans[Config.lang].atkFlinch.replace(/_MON0_/, defMon.name) + "\n";
 								games[channel].turn = games[channel].turn === 0 ? 1 : 0;
 							}
 							break;
@@ -333,7 +332,7 @@ var game = {
 				var winner = games[channel].players[games[channel].origin];
 				var loser = games[channel].players[games[channel].origin === 0 ? 1 : 0];
 			}
-			games[channel].queue += "Congratulations, **" + winner.name + "**, you've defeated **" + loser.name + "**!";
+			games[channel].queue += Trans[Config.lang].gameOver.replace(/_PLAYER0_/, winner.name).replace(/_PLAYER1_/, loser.name);
 			games[channel].ended = true;
 			logs.set(winner.id, loser.id);
 		}
@@ -364,17 +363,17 @@ var game = {
 var damage = {
 	"power": function() {
 		var a = Math.random();
-		if(a >= .985) {return 140;}
-		else if(a >= .90 && a < .985) {return 110;}
-		else if(a >= .65 && a < .90) {return 90;}
-		else if(a >= .35 && a < .65) {return 70;}
-		else if(a >= .10 && a < .35) {return 50;}
-		else if(a >= .015 && a < .10) {return 30;}
+		if(a >= 0.985) {return 140;}
+		else if(a >= 0.90 && a < 0.985) {return 110;}
+		else if(a >= 0.65 && a < 0.90) {return 90;}
+		else if(a >= 0.35 && a < 0.65) {return 70;}
+		else if(a >= 0.10 && a < 0.35) {return 50;}
+		else if(a >= 0.015 && a < 0.10) {return 30;}
 		else {return 15;}
 	},
 	"crit": function(mon) {
 		if (game.occurRate(mon, Config.rateCrit, "spe") > Math.random()) {
-			msgCrit = "Critical hit!\n";
+			msgCrit = Trans[Config.lang].atkCrit + "\n";
 			return 2;
 		}
 		else {
@@ -394,8 +393,8 @@ var damage = {
 		if(Config.enableType === true) {
 			var t = typesMatch[defMonTypes[0]][moveType] * (defMonTypes[1] ? typesMatch[defMonTypes[1]][moveType] : 1);
 			if (t === 0) {t = 0.5} //types that would negate dmg are changed to 1/2
-			if (t > 1) {msgType = "It's very effective!\n";}
-			else if (t < 1) {msgType = "It's not very effective...\n";}
+			if (t > 1) {msgType = Trans[Config.lang].atkVeryEff + "\n";}
+			else if (t < 1) {msgType = Trans[Config.lang].atkNotVeryEff + "\n";}
 			return t;
 		}
 		else {
@@ -411,24 +410,24 @@ var stats = {
 	"set": {
 		"abs": function (mon, stat, i) {
 			mon[stat] = i;
-			return "**" + mon.name + "**\'s **" + stat.toUpperCase() + "** went to **" + -i +"**!\n"
+			return Trans[Config.lang].statsAbs.replace(/_MON0_/, mon.name).replace(/_NUM0_/, -i).replace(/_STAT_/, stat.toUpperCase()) + "\n";
 		},
 		"rel": function (mon, stat, i) {
 			mon.mod[stat] += i;
 			if(i < 0) {
-				return "**" + mon.name + "**\'s **" + stat.toUpperCase() + "** decreased by **" + -i +"**!\n"
+				return Trans[Config.lang].statsRelDn.replace(/_MON0_/, mon.name).replace(/_NUM0_/, -i).replace(/_STAT_/, stat.toUpperCase()) + "\n";
 			}
 			else {
-				return "**" + mon.name + "**\'s **" + stat.toUpperCase() + "** increased by **" + i +"**!\n"
+				return Trans[Config.lang].statsRelUp.replace(/_MON0_/, mon.name).replace(/_NUM0_/, i).replace(/_STAT_/, stat.toUpperCase()) + "\n";
 			}
 		},
 		"per": function (mon, stat, i) {
 			mon[stat] += Math.floor(mon[stat] * i / 100);
 			if(i < 0) {
-				return "**" + mon.name + "**\'s **" + stat.toUpperCase() + "** decreased by **" + -i +"**%!\n"
+				return Trans[Config.lang].statsPerDn.replace(/_MON0_/, mon.name).replace(/_NUM0_/, -i).replace(/_STAT_/, stat.toUpperCase()) + "\n";
 			}
 			else {
-				return "**" + mon.name + "**\'s **" + stat.toUpperCase() + "** increased by **" + i +"**%!\n"
+				return Trans[Config.lang].statsPerUp.replace(/_MON0_/, mon.name).replace(/_NUM0_/, i).replace(/_STAT_/, stat.toUpperCase()) + "\n";
 			}
 		},
 		"rand": function(min, max) {
@@ -441,13 +440,13 @@ var statuses = {
 	"set": function (mon, status, channel) {
 		if (mon.status === -1) {
 				switch (status) {	
-					case 0: games[channel].queue += mon.name + " fell asleep!\n";break;
-					case 1: games[channel].queue += mon.name + " was burned!\n";break;
-					case 2: games[channel].queue += mon.name + " was poisoned!\n";break;
-					case 3: games[channel].queue += mon.name + " was paralysed!\n";break;
-					case 4: games[channel].queue += mon.name + " was frozen!\n";break;
-					case 5: games[channel].queue += mon.name + " is confused!\n";break;
-					case 6: games[channel].queue += mon.name + " fell in love!\n";break;
+					case 0: games[channel].queue += Trans[Config.lang].statusSlp.replace(/_MON0_/, mon.name) + "\n";break;
+					case 1: games[channel].queue += Trans[Config.lang].statusBrn.replace(/_MON0_/, mon.name) + "\n";break;
+					case 2: games[channel].queue += Trans[Config.lang].statusPsn.replace(/_MON0_/, mon.name) + "\n";break;
+					case 3: games[channel].queue += Trans[Config.lang].statusPrz.replace(/_MON0_/, mon.name) + "\n";break;
+					case 4: games[channel].queue += Trans[Config.lang].statusFrz.replace(/_MON0_/, mon.name) + "\n";break;
+					case 5: games[channel].queue += Trans[Config.lang].statusCfs.replace(/_MON0_/, mon.name) + "\n";break;
+					case 6: games[channel].queue += Trans[Config.lang].statusLov.replace(/_MON0_/, mon.name) + "\n";break;
 				}
 				mon.status = status;
 		}
@@ -461,48 +460,48 @@ var statuses = {
 		switch (mon.status) {
 			case 0: //Sleeping
 				if (Math.random() < 0.5) {
-					games[channel].queue += mon.name + " is asleep!";
+					games[channel].queue += Trans[Config.lang].statusContSlp.replace(/_MON0_/, mon.name);
 					return 0;
 				}
 				else {
-					games[channel].queue += mon.name + " woke up!\n";
+					games[channel].queue += Trans[Config.lang].statusHealSlp.replace(/_MON0_/, mon.name) + "\n";
 					mon.status = -1;
 					return 1;
 				}
 			case 3: //Paralysed
 				if (Math.random() < 0.5) {
-					games[channel].queue += mon.name + " is completely paralysed!";
+					games[channel].queue += Trans[Config.lang].statusContPrz.replace(/_MON0_/, mon.name);
 					return 0;
 				}
 				else {
-					games[channel].queue += mon.name + " overcame its paralysis!\n";
+					games[channel].queue += Trans[Config.lang].statusHealPrz.replace(/_MON0_/, mon.name) + "\n";
 					mon.status = -1;
 					return 1;
 				}
 			case 4: //Frozen
 				if (Math.random() < 0.5) {
-					games[channel].queue += mon.name + " is frozen solid!";
+					games[channel].queue += Trans[Config.lang].statusContFrz.replace(/_MON0_/, mon.name);
 					return 0;
 				}
 				else {
-					games[channel].queue += mon.name + " defrosted!\n";
+					games[channel].queue += Trans[Config.lang].statusHealFrz.replace(/_MON0_/, mon.name) + "\n";
 					mon.status = -1;
 					return 1;
 				}
 			case 5: //Confused
 				if (Math.random() < 0.5) {
 					mon.hp -= Math.floor(mon.hpmax / 16);
-					games[channel].queue += mon.name + " hurt itself in its confusion!\n" + game.displayHp(mon);
+					games[channel].queue += Trans[Config.lang].statusContCfs.replace(/_MON0_/, mon.name) + "\n" + game.displayHp(mon);
 					return 0;
 				}
 				else {
-					games[channel].queue += mon.name + " snapped out of its confusion!\n";
+					games[channel].queue += Trans[Config.lang].statusHealCfs.replace(/_MON0_/, mon.name) + "\n";
 					mon.status = -1;
 					return 1;
 				}
 			case 6: //Infatuated
 				if (Math.random() < 0.333) {
-					games[channel].queue += mon.name + " is immobilized by love!";
+					games[channel].queue += Trans[Config.lang].statusContLov.replace(/_MON0_/, mon.name);
 					return 0;
 				}
 				else {
@@ -515,11 +514,11 @@ var statuses = {
 		switch (mon.status) {
 			case 1: //Burn
 				mon.hp -= Math.floor(mon.hpmax / 16);
-				games[channel].queue += mon.name + " is hurt by the burn!\n" + game.displayHp(mon);
+				games[channel].queue += Trans[Config.lang].statusContBrn.replace(/_MON0_/, mon.name) + "\n" + game.displayHp(mon);
 				break;
 			case 2: //Poison
 				mon.hp -= Math.floor(mon.hpmax / 16);
-				games[channel].queue += mon.name + " is hurt by the poison!\n" + game.displayHp(mon);
+				games[channel].queue += Trans[Config.lang].statusContPsn.replace(/_MON0_/, mon.name) + "\n" + game.displayHp(mon);
 				break;
 			default: //None
 				break;
