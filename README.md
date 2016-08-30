@@ -3,7 +3,8 @@ Battlebot - Battles with Discord
 ##Installation
 
 [node.js](https://nodejs.org/en/)
-[discord.js](https://github.com/hydrabolt/discord.js)
+
+[discord.js](https://github.com/hydrabolt/discord.js) \(requires Python 2.7\)
 	 
 ## Commands
 - `!battle` - start or accept a battle.
