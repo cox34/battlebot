@@ -4,7 +4,7 @@ Battlebot - Battles with Discord
 
 Install [node.js](https://nodejs.org/en/)
 
-Install [discord.js](https://github.com/hydrabolt/discord.js) [how-to install](https://discordjs.readthedocs.io/en/latest/installing.html)
+Install [discord.js](https://github.com/hydrabolt/discord.js) \([help](https://discordjs.readthedocs.io/en/latest/installing.html)\)
 	 
 ## Commands
 - `!battle` - start or accept a battle.

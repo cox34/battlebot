@@ -1,6 +1,7 @@
 var Discord = require("discord.js");
 var Config = require("./config.json");
 var Trans = require("./translation.json");
+var Moves = require("./moves.json");
 var fs = require('fs');
 var bot = new Discord.Client();
 
@@ -177,6 +178,11 @@ var commands = {
 				bot.sendMessage(msg.channel.id, Trans[Config.lang].recordTotal.replace(/_NUM0_/, Log.battleCount));
 			}
 		}
+	},
+	"battleconfig": {
+		process: function(bot, msg, suffix) {
+
+		}
 	}
 };
 
@@ -206,30 +212,38 @@ var game = {
 			if(atkName === ""){
 				atkName = Trans[Config.lang].atkDefault;
 			}
-			attack.effect = "d";
-			//attack.acc = game.occurRate(defMon, Config.rateFail, "spe");
-			attack.failed = game.occurRate(defMon, Config.rateFail, "spe") > Math.random() ? true : false;
-			attack.type = offMon.type[(offMon.type[1] ? Math.floor(Math.random() * 2) : 0)];
-			attack.power = damage.power();
-			attack.effect += "s0" + Math.floor(Math.random() * 7) + game.occurRate(offMon, Config.rateStatusEffect, "spc");
-			attack.effect += "f" + game.occurRate(offMon, Config.rateFlinch, "spc");
-			if (game.occurRate(offMon, Config.rateRecover, "spc") > Math.random()) {
-				attack.effect += "h" + (Math.random() < 0.15 ? 0 : 1) + Config.modRecover;
-			}
-			if (game.occurRate(defMon, Config.rateRecoil, "spc") > Math.random()) {
-				attack.effect += "r" + (Math.random() < 0.50 ? 0 : 1) + Config.modRecoil;
-			}
-			if(atkName === "suicide" || atkName === "selfdestruct" || atkName === "explosion") {
-				attack.effect += "r11";
-			}
+			if(Config.enableMoveDb === true){/*  && Moves[atkName] !== undefined) {//
+				
+				attack = Moves[atkName];
+				attack.failed = (attack.acc === -1) ? false : (Math.random() < attack.acc/100 ? true : false);
 			
-			var i = Math.floor(Math.random() * 2);
-			attack.effect += "m" + i + Math.floor(Math.random() * 4) + game.occurRate(offMon, Config.rateStatMod, "spc") + (i === 0 ? "-" : "+") + 1;
-
+				 */
+			}
+			else { //randomly generated move
+				attack.effect = "d";
+				//attack.acc = game.occurRate(defMon, Config.rateFail, "spe");
+				attack.failed = game.occurRate(defMon, Config.rateFail, "spe") > Math.random() ? true : false;
+				attack.type = offMon.type[(offMon.type[1] ? Math.floor(Math.random() * 2) : 0)];
+				attack.power = damage.power();
+				attack.effect += "s0" + Math.floor(Math.random() * 7) + game.occurRate(offMon, Config.rateStatusEffect, "spc");
+				attack.effect += "f" + game.occurRate(offMon, Config.rateFlinch, "spc");
+				if (game.occurRate(offMon, Config.rateRecover, "spc") > Math.random()) {
+					attack.effect += "h" + (Math.random() < 0.15 ? 0 : 1) + Config.modRecover;
+				}
+				if (game.occurRate(defMon, Config.rateRecoil, "spc") > Math.random()) {
+					attack.effect += "r" + (Math.random() < 0.50 ? 0 : 1) + Config.modRecoil;
+				}
+				if(atkName === "suicide" || atkName === "selfdestruct" || atkName === "explosion") {
+					attack.effect += "r11";
+				}
+				var i = Math.floor(Math.random() * 2);
+				attack.effect += "m" + i + Math.floor(Math.random() * 4) + game.occurRate(offMon, Config.rateStatMod, "spc") + (i === 0 ? "-" : "+") + 1;
+			}
 			
 			if (attack.failed === true && attack.effect.indexOf("d") >= 0) {
 				games[channel].queue += Trans[Config.lang].atkFail.replace(/_MON0_/, offMon.name).replace(/_ATTACK_/, atkName) + "\n";
 			}
+			
 			/*
 			;Parameters
 			;d - Damage: d
@@ -333,6 +347,10 @@ var game = {
 				var loser = games[channel].players[games[channel].origin === 0 ? 1 : 0];
 			}
 			games[channel].queue += Trans[Config.lang].gameOver.replace(/_PLAYER0_/, winner.name).replace(/_PLAYER1_/, loser.name);
+			
+			//NadekoBot integration
+			bot.sendMessage(channel, "$award "+ Math.ceil(Math.random()*3) + " " + winner.id);
+			
 			games[channel].ended = true;
 			logs.set(winner.id, loser.id);
 		}

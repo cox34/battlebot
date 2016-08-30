@@ -1,3172 +1,2626 @@
 {
-	"absorb": {
-		"type": 4,
-		"power": 20,
-		"acc": 100,
-		"eff": "dh1050"
-	},
-	"acid": {
-		"type": 7,
-		"power": 40,
-		"acc": 100,
-		"eff": "dm01010-1"
-	},
-	"acid armor": {
-		"type": 7,
-		"power": 0,
-		"acc": -1,
-		"eff": "m11100+2"
-	},
-	"acid spray": {
-		"type": 7,
-		"power": 40,
-		"acc": 100,
-		"eff": "dm03010-1"
-	},
-	"acrobatics": {
-		"type": 9,
-		"power": 55,
-		"acc": 100,
-		"eff": "d"
-	},
-	"acupressure": {
-		"type": 0,
-		"power": 0,
-		"acc": -1,
-		"eff": "m1x+2100"
-	},
-	"aerial ace": {
-		"type": 9,
-		"power": 60,
-		"acc": -1,
-		"eff": "d"
-	},
-	"aeroblast": {
-		"type": 9,
-		"power": 100,
-		"acc": 95,
-		"eff": "d"
-	},
-	"agility": {
-		"type": 10,
-		"power": 0,
-		"acc": -1,
-		"eff": "m12100+2"
-	},
-	"air cutter": {
-		"type": 9,
-		"power": 55,
-		"acc": 95,
-		"eff": "d"
-	},
-	"air slash": {
-		"type": 9,
-		"power": 75,
-		"acc": 95,
-		"eff": "df30"
-	},
-	"amnesia": {
-		"type": 10,
-		"power": 0,
-		"acc": -1,
-		"eff": "m13100+2"
-	},
-	"ancientpower": {
-		"type": 12,
-		"power": 60,
-		"acc": 100,
-		"eff": "dm1x+1010"
-	},
-	"aqua jet": {
-		"type": 2,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"aqua ring": {
-		"type": 2,
-		"power": 0,
-		"acc": -1,
-		"eff": "h06"
-	},
-	"aqua tail": {
-		"type": 2,
-		"power": 90,
-		"acc": 90,
-		"eff": "d"
-	},
-	"arm thrust": {
-		"type": 6,
-		"power": 15,
-		"acc": 100,
-		"eff": "d"
-	},
-	"aromatherapy": {
-		"type": 4,
-		"power": 0,
-		"acc": -1,
-		"eff": "c100"
-	},
-	"assurance": {
-		"type": 15,
-		"power": 50,
-		"acc": 100,
-		"eff": "d"
-	},
-	"astonish": {
-		"type": 13,
-		"power": 30,
-		"acc": 100,
-		"eff": "df30"
-	},
-	"attack order": {
-		"type": 11,
-		"power": 90,
-		"acc": 100,
-		"eff": "dc100"
-	},
-	"attract": {
-		"type": 0,
-		"power": 0,
-		"acc": 100,
-		"eff": "s06100"
-	},
-	"aura sphere": {
-		"type": 6,
-		"power": 90,
-		"acc": -1,
-		"eff": "d"
-	},
-	"aurora beam": {
-		"type": 5,
-		"power": 65,
-		"acc": 100,
-		"eff": "ds04010"
-	},
-	"autotomize": {
-		"type": 16,
-		"power": 0,
-		"acc": -1,
-		"eff": "m12100+2"
-	},
-	"avalanche": {
-		"type": 5,
-		"power": 60,
-		"acc": 100,
-		"eff": "d"
-	},
-	"barrage": {
-		"type": 0,
-		"power": 15,
-		"acc": 85,
-		"eff": "d"
-	},
-	"barrier": {
-		"type": 10,
-		"power": 0,
-		"acc": -1,
-		"eff": "m11100+2"
-	},
-	"belly drum": {
-		"type": 0,
-		"power": 0,
-		"acc": -1,
-		"eff": "r1050m10100+6"
-	},
-	"bide": {
-		"type": 0,
-		"acc": 100,
-		"eff": "d"
-	},
-	"bind": {
-		"type": 0,
-		"power": 15,
-		"acc": 85,
-		"eff": "ds03050"
-	},
-	"bite": {
-		"type": 15,
-		"power": 60,
-		"acc": 100,
-		"eff": "df30"
-	},
-	"blast burn": {
-		"type": 1,
-		"power": 150,
-		"acc": 90,
-		"eff": "dw"
-	},
-	"blaze kick": {
-		"type": 1,
-		"power": 85,
-		"acc": 90,
-		"eff": "ds01010"
-	},
-	"blizzard": {
-		"type": 5,
-		"power": 120,
-		"acc": 70,
-		"eff": "ds04010"
-	},
-	"blue flare": {
-		"type": 1,
-		"power": 130,
-		"acc": 85,
-		"eff": "ds01020"
-	},
-	"body slam": {
-		"type": 0,
-		"power": 85,
-		"acc": 100,
-		"eff": "ds03099"
-	},
-	"bolt strike": {
-		"type": 3,
-		"power": 130,
-		"acc": 85,
-		"eff": "ds03020"
-	},
-	"bone club": {
-		"type": 8,
-		"power": 65,
-		"acc": 85,
-		"eff": "df10"
-	},
-	"bone rush": {
-		"type": 8,
-		"power": 25,
-		"acc": 90,
-		"eff": "d"
-	},
-	"bonemerang": {
-		"type": 8,
-		"power": 50,
-		"acc": 90,
-		"eff": "d"
-	},
-	"bounce": {
-		"type": 9,
-		"power": 85,
-		"acc": 85,
-		"eff": "ds03030"
-	},
-	"brave bird": {
-		"type": 9,
-		"power": 120,
-		"acc": 100,
-		"eff": "dr0033"
-	},
-	"brick break": {
-		"type": 6,
-		"power": 75,
-		"acc": 100,
-		"eff": "d"
-	},
-	"brine": {
-		"type": 2,
-		"power": 65,
-		"acc": 100,
-		"eff": "d"
-	},
-	"bubble": {
-		"type": 2,
-		"power": 20,
-		"acc": 100,
-		"eff": "dm02010-1"
-	},
-	"bubblebeam": {
-		"type": 2,
-		"power": 65,
-		"acc": 100,
-		"eff": "dm02010-1"
-	},
-	"bug bite": {
-		"type": 11,
-		"power": 60,
-		"acc": 100,
-		"eff": "d"
-	},
-	"bug buzz": {
-		"type": 11,
-		"power": 90,
-		"acc": 100,
-		"eff": "dm03010-1"
-	},
-	"bulk up": {
-		"type": 6,
-		"power": 0,
-		"acc": -1,
-		"eff": "m10100+1m11100+1"
-	},
-	"bulldoze": {
-		"type": 8,
-		"power": 60,
-		"acc": 100,
-		"eff": "dm02100-1"
-	},
-	"bullet punch": {
-		"type": 16,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"bullet seed": {
-		"type": 4,
-		"power": 25,
-		"acc": 100,
-		"eff": "d"
-	},
-	"calm mind": {
-		"type": 10,
-		"power": 0,
-		"acc": -1,
-		"eff": "m13100+1"
-	},
-	"captivate": {
-		"type": 0,
-		"power": 0,
-		"acc": 100,
-		"eff": "m03050-2"
-	},
-	"charge": {
-		"type": 3,
-		"power": 0,
-		"acc": 100,
-		"eff": "m13100+1"
-	},
-	"charge beam": {
-		"type": 3,
-		"power": 50,
-		"acc": 90,
-		"eff": "dm13070+1"
-	},
-	"charm": {
-		"type": 0,
-		"power": 0,
-		"acc": 100,
-		"eff": "m00100-2"
-	},
-	"chatter": {
-		"type": 9,
-		"power": 60,
-		"acc": 100,
-		"eff": "ds05010"
-	},
-	"chip away": {
-		"type": 0,
-		"power": 70,
-		"acc": 100,
-		"eff": "d"
-	},
-	"circle throw": {
-		"type": 6,
-		"power": 60,
-		"acc": 90,
-		"eff": "d"
-	},
-	"clamp": {
-		"type": 2,
-		"power": 35,
-		"acc": 85,
-		"eff": "d"
-	},
-	"clear smog": {
-		"type": 7,
-		"power": 50,
-		"acc": -1,
-		"eff": "d"
-	},
-	"close combat": {
-		"type": 6,
-		"power": 120,
-		"acc": 100,
-		"eff": "dm11100-2"
-	},
-	"coil": {
-		"type": 7,
-		"power": 0,
-		"acc": -1,
-		"eff": "m10100+1m11100+1"
-	},
-	"comet punch": {
-		"type": 0,
-		"power": 18,
-		"acc": 85,
-		"eff": "d"
-	},
-	"confuse ray": {
-		"type": 13,
-		"power": 0,
-		"acc": 100,
-		"eff": "s05100"
-	},
-	"confusion": {
-		"type": 10,
-		"power": 50,
-		"acc": 100,
-		"eff": "ds05010"
-	},
-	"constrict": {
-		"type": 0,
-		"power": 10,
-		"acc": 100,
-		"eff": "d"
-	},
-	"cosmic power": {
-		"type": 10,
-		"power": 0,
-		"acc": -1,
-		"eff": "m11100+2"
-	},
-	"cotton guard": {
-		"type": 4,
-		"power": 0,
-		"acc": -1,
-		"eff": "m11100+3"
-	},
-	"cotton spore": {
-		"type": 4,
-		"power": 0,
-		"acc": 100,
-		"eff": "m02100-2"
-	},
-	"counter": {
-		"type": 6,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"covet": {
-		"type": 0,
-		"power": 60,
-		"acc": 100,
-		"eff": "d"
-	},
-	"crabhammer": {
-		"type": 2,
-		"power": 90,
-		"acc": 90,
-		"eff": "d"
-	},
-	"cross chop": {
-		"type": 6,
-		"power": 100,
-		"acc": 80,
-		"eff": "d"
-	},
-	"cross poison": {
-		"type": 7,
-		"power": 70,
-		"acc": 100,
-		"eff": "ds02010"
-	},
-	"crunch": {
-		"type": 15,
-		"power": 80,
-		"acc": 100,
-		"eff": "dm01020-1"
-	},
-	"crush claw": {
-		"type": 0,
-		"power": 75,
-		"acc": 95,
-		"eff": "dm01050-1"
-	},
-	"curse": {
-		"type": 13,
-		"power": 0,
-		"acc": -1,
-		"eff": "m10100+1m11100+1m12100-1"
-	},
-	"cut": {
-		"type": 0,
-		"power": 50,
-		"acc": 95,
-		"eff": "d"
-	},
-	"dark pulse": {
-		"type": 15,
-		"power": 80,
-		"acc": 100,
-		"eff": "df20"
-	},
-	"dark void": {
-		"type": 15,
-		"power": 0,
-		"acc": 80,
-		"eff": "s00100"
-	},
-	"defend order": {
-		"type": 11,
-		"power": 0,
-		"acc": -1,
-		"eff": "m11100+1"
-	},
-	"defense curl": {
-		"type": 0,
-		"power": 0,
-		"acc": -1,
-		"eff": "m11100+1"
-	},
-	"dig": {
-		"type": 8,
-		"power": 80,
-		"acc": 100,
-		"eff": "d"
-	},
-	"discharge": {
-		"type": 3,
-		"power": 80,
-		"acc": 100,
-		"eff": "ds03030"
-	},
-	"dive": {
-		"type": 2,
-		"power": 80,
-		"acc": 100,
-		"eff": "d"
-	},
-	"dizzy punch": {
-		"type": 0,
-		"power": 70,
-		"acc": 100,
-		"eff": "ds05020"
-	},
-	"doom desire": {
-		"type": 16,
-		"power": 140,
-		"acc": 100,
-		"eff": "d"
-	},
-	"double hit": {
-		"type": 0,
-		"power": 35,
-		"acc": 90,
-		"eff": "d"
-	},
-	"double kick": {
-		"type": 6,
-		"power": 30,
-		"acc": 100,
-		"eff": "d"
-	},
-	"double-edge": {
-		"type": 0,
-		"power": 120,
-		"acc": 100,
-		"eff": "dr0033"
-	},
-	"doubleslap": {
-		"type": 0,
-		"power": 15,
-		"acc": 85,
-		"eff": "d"
-	},
-	"draco meteor": {
-		"type": 14,
-		"power": 140,
-		"acc": 90,
-		"eff": "dm10100-2"
-	},
-	"dragon claw": {
-		"type": 14,
-		"power": 80,
-		"acc": 100,
-		"eff": "d"
-	},
-	"dragon dance": {
-		"type": 14,
-		"power": 0,
-		"acc": -1,
-		"eff": "m10100+1m12100+1"
-	},
-	"dragon pulse": {
-		"type": 14,
-		"power": 90,
-		"acc": 100,
-		"eff": "d"
-	},
-	"dragon rage": {
-		"type": 14,
-		"acc": 100,
-		"eff": "d40"
-	},
-	"dragon rush": {
-		"type": 14,
-		"power": 100,
-		"acc": 75,
-		"eff": "df20"
-	},
-	"dragon tail": {
-		"type": 14,
-		"power": 60,
-		"acc": 90,
-		"eff": "d"
-	},
-	"dragonbreath": {
-		"type": 14,
-		"power": 60,
-		"acc": 100,
-		"eff": "ds03030"
-	},
-	"drain punch": {
-		"type": 6,
-		"power": 75,
-		"acc": 100,
-		"eff": "dh1050"
-	},
-	"dream eater": {
-		"type": 10,
-		"power": 100,
-		"acc": 100,
-		"eff": "d"
-	},
-	"drill peck": {
-		"type": 9,
-		"power": 80,
-		"acc": 100,
-		"eff": "d"
-	},
-	"drill run": {
-		"type": 8,
-		"power": 80,
-		"acc": 95,
-		"eff": "d"
-	},
-	"dual chop": {
-		"type": 14,
-		"power": 40,
-		"acc": 90,
-		"eff": "d"
-	},
-	"dynamicpunch": {
-		"type": 6,
-		"power": 100,
-		"acc": 50,
-		"eff": "ds05100"
-	},
-	"earth power": {
-		"type": 8,
-		"power": 90,
-		"acc": 100,
-		"eff": "dm01010-1"
-	},
-	"earthquake": {
-		"type": 8,
-		"power": 100,
-		"acc": 100,
-		"eff": "d"
-	},
-	"echoed voice": {
-		"type": 0,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"egg bomb": {
-		"type": 0,
-		"power": 100,
-		"acc": 75,
-		"eff": "d"
-	},
-	"electro ball": {
-		"type": 3,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"electroweb": {
-		"type": 3,
-		"power": 55,
-		"acc": 95,
-		"eff": "dm02100-1"
-	},
-	"ember": {
-		"type": 1,
-		"power": 40,
-		"acc": 100,
-		"eff": "ds01010"
-	},
-	"energy ball": {
-		"type": 4,
-		"power": 80,
-		"acc": 100,
-		"eff": "dm01010-1"
-	},
-	"eruption": {
-		"type": 1,
-		"acc": 100,
-		"eff": "d"
-	},
-	"explosion": {
-		"type": 0,
-		"power": 250,
-		"acc": 100,
-		"eff": "dr1100"
-	},
-	"extrasensory": {
-		"type": 10,
-		"power": 80,
-		"acc": 100,
-		"eff": "df10"
-	},
-	"extremespeed": {
-		"type": 0,
-		"power": 80,
-		"acc": 100,
-		"eff": "d"
-	},
-	"facade": {
-		"type": 0,
-		"power": 70,
-		"acc": 100,
-		"eff": "d"
-	},
-	"faint attack": {
-		"type": 15,
-		"power": 60,
-		"acc": -1,
-		"eff": "d"
-	},
-	"fake out": {
-		"type": 0,
-		"power": 40,
-		"acc": 100,
-		"eff": "df10"
-	},
-	"fake tears": {
-		"type": 15,
-		"power": 0,
-		"acc": 100,
-		"eff": "m01100-2"
-	},
-	"false swipe": {
-		"type": 0,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"featherdance": {
-		"type": 9,
-		"power": 0,
-		"acc": 100,
-		"eff": "m00100-2"
-	},
-	"feint": {
-		"type": 0,
-		"power": 30,
-		"acc": 100,
-		"eff": "d"
-	},
-	"fiery dance": {
-		"type": 1,
-		"power": 80,
-		"acc": 100,
-		"eff": "dm10050+1"
-	},
-	"fire blast": {
-		"type": 1,
-		"power": 120,
-		"acc": 85,
-		"eff": "ds01010"
-	},
-	"fire fang": {
-		"type": 1,
-		"power": 65,
-		"acc": 95,
-		"eff": "ds01010f10"
-	},
-	"fire pledge": {
-		"type": 1,
-		"power": 50,
-		"acc": 100,
-		"eff": "d"
-	},
-	"fire punch": {
-		"type": 1,
-		"power": 75,
-		"acc": 100,
-		"eff": "ds01010"
-	},
-	"fire spin": {
-		"type": 1,
-		"power": 35,
-		"acc": 85,
-		"eff": "d"
-	},
-	"fissure": {
-		"type": 8,
-		"acc": 30,
-		"power": -1,
-		"eff": "d"
-	},
-	"flame burst": {
-		"type": 1,
-		"power": 70,
-		"acc": 100,
-		"eff": "d"
-	},
-	"flame charge": {
-		"type": 1,
-		"power": 50,
-		"acc": 100,
-		"eff": "dm12100+1"
-	},
-	"flame wheel": {
-		"type": 1,
-		"power": 60,
-		"acc": 100,
-		"eff": "ds01010"
-	},
-	"flamethrower": {
-		"type": 1,
-		"power": 95,
-		"acc": 100,
-		"eff": "ds01010"
-	},
-	"flare blitz": {
-		"type": 1,
-		"power": 120,
-		"acc": 100,
-		"eff": "dr0033"
-	},
-	"flash cannon": {
-		"type": 16,
-		"power": 80,
-		"acc": 100,
-		"eff": "dm01010-1"
-	},
-	"flatter": {
-		"type": 15,
-		"power": 0,
-		"acc": 100,
-		"eff": "m00100+2s05100"
-	},
-	"fling": {
-		"type": 15,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"fly": {
-		"type": 9,
-		"power": 90,
-		"acc": 95,
-		"eff": "d"
-	},
-	"focus blast": {
-		"type": 6,
-		"power": 120,
-		"acc": 70,
-		"eff": "dm01010-1"
-	},
-	"focus punch": {
-		"type": 6,
-		"power": 150,
-		"acc": 100,
-		"eff": "d"
-	},
-	"force palm": {
-		"type": 6,
-		"power": 60,
-		"acc": 100,
-		"eff": "ds03030"
-	},
-	"foul play": {
-		"type": 15,
-		"power": 95,
-		"acc": 100,
-		"eff": "d"
-	},
-	"freeze shock": {
-		"type": 5,
-		"power": 140,
-		"acc": 90,
-		"eff": "ds03030"
-	},
-	"frenzy plant": {
-		"type": 4,
-		"power": 150,
-		"acc": 90,
-		"eff": "dw"
-	},
-	"frost breath": {
-		"type": 5,
-		"power": 40,
-		"acc": 90,
-		"eff": "d"
-	},
-	"fury attack": {
-		"type": 0,
-		"power": 15,
-		"acc": 85,
-		"eff": "d"
-	},
-	"fury cutter": {
-		"type": 11,
-		"power": 20,
-		"acc": 95,
-		"eff": "d"
-	},
-	"fury swipes": {
-		"type": 0,
-		"power": 18,
-		"acc": 80,
-		"eff": "d"
-	},
-	"fusion bolt": {
-		"type": 3,
-		"power": 100,
-		"acc": 100,
-		"eff": "d"
-	},
-	"fusion flare": {
-		"type": 1,
-		"power": 100,
-		"acc": 100,
-		"eff": "d"
-	},
-	"future sight": {
-		"type": 10,
-		"power": 100,
-		"acc": 100,
-		"eff": "d"
-	},
-	"gear grind": {
-		"type": 16,
-		"power": 50,
-		"acc": 85,
-		"eff": "d"
-	},
-	"giga drain": {
-		"type": 4,
-		"power": 75,
-		"acc": 100,
-		"eff": "dh1050"
-	},
-	"giga impact": {
-		"type": 0,
-		"power": 150,
-		"acc": 90,
-		"eff": "dw"
-	},
-	"glaciate": {
-		"type": 5,
-		"power": 65,
-		"acc": 95,
-		"eff": "dm02100-1"
-	},
-	"glare": {
-		"type": 0,
-		"power": 0,
-		"acc": 90,
-		"eff": "s03100"
-	},
-	"grass pledge": {
-		"type": 4,
-		"power": 50,
-		"acc": 100,
-		"eff": "d"
-	},
-	"grasswhistle": {
-		"type": 4,
-		"power": 0,
-		"acc": 55,
-		"eff": "s00100"
-	},
-	"growl": {
-		"type": 0,
-		"power": 0,
-		"acc": 100,
-		"eff": "m00100-1"
-	},
-	"growth": {
-		"type": 0,
-		"power": 0,
-		"acc": -1,
-		"eff": "m10100+1"
-	},
-	"guillotine": {
-		"type": 0,
-		"acc": 30,
-		"power": -1,
-		"eff": "d"
-	},
-	"gunk shot": {
-		"type": 7,
-		"power": 120,
-		"acc": 70,
-		"eff": "ds02030"
-	},
-	"gust": {
-		"type": 9,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"hammer arm": {
-		"type": 6,
-		"power": 100,
-		"acc": 90,
-		"eff": "dm12100-1"
-	},
-	"harden": {
-		"type": 0,
-		"power": 0,
-		"eff": "m11100+1",
-		"acc": -1
-	},
-	"head charge": {
-		"type": 0,
-		"power": 120,
-		"acc": 100,
-		"eff": "dr0025"
-	},
-	"head smash": {
-		"type": 12,
-		"power": 150,
-		"acc": 80,
-		"eff": "dr0050"
-	},
-	"headbutt": {
-		"type": 0,
-		"power": 70,
-		"acc": 100,
-		"eff": "df30"
-	},
-	"heal bell": {
-		"type": 0,
-		"power": 0,
-		"eff": "c100",
-		"acc": -1
-	},
-	"heal order": {
-		"type": 11,
-		"power": 0,
-		"eff": "h050"
-	Name: heal order,
-		"acc": -1,
-	},
-	"heal pulse": {
-		"type": 10,
-		"power": 0,
-		"eff": "h050"
-	Name: heal pulse,
-		"acc": -1,
-	
-	"healing wish": {
-	
-	
-	
-	
-	},
-	"heart stamp": {
-		"type": 10,
-		"power": 60,
-		"acc": 100,
-		"eff": "df10"
-	
-	"heart swap": {
-	
-	
-	
-	
-	},
-	"heat crash": {
-		"type": 1,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"heat wave": {
-		"type": 1,
-		"power": 100,
-		"acc": 90,
-		"eff": "ds01010"
-	},
-	"heavy slam": {
-		"type": 16,
-	
-		"acc": 100,
-		"eff": "d"
-	
-	"helping hand": {
-	
-	
-	
-	
-	
-	},
-	"hex": {
-		"type": 13,
-		"power": 50,
-		"acc": 100,
-		"eff": "d"
-	[hi jump kick],
-		"type": 6,
-		"power": 130,
-		"acc": 90,
-		"eff": "dr150"
-	},
-	"hidden power": {
-		"type": 0,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"hone claws": {
-		"type": 15,
-		"power": 0,
-		"eff": "m10100+1"
-	Name: hone claws,
-		"acc": -1,
-	},
-	"horn attack": {
-		"type": 0,
-		"power": 65,
-		"acc": 100,
-		"eff": "d"
-	},
-	"horn drill": {
-		"type": 0,
-		"acc": 30,
-		"power": -1,
-		"eff": "d"
-	},
-	"horn leech": {
-		"type": 4,
-		"power": 75,
-		"acc": 100,
-		"eff": "dh150"
-	},
-	"howl": {
-		"type": 0,
-		"power": 0,
-		"eff": "m10100+1"
-	Name: howl,
-		"acc": -1,
-	},
-	"hurricane": {
-		"type": 9,
-		"power": 120,
-		"acc": 70,
-		"eff": "ds05030"
-	},
-	"hydro cannon": {
-		"type": 2,
-		"power": 150,
-		"acc": 90,
-		"eff": "dw"
-	},
-	"hydro pump": {
-		"type": 2,
-		"power": 120,
-		"acc": 80,
-		"eff": "d"
-	},
-	"hyper beam": {
-		"type": 0,
-		"power": 150,
-		"acc": 90,
-		"eff": "dw"
-	},
-	"hyper fang": {
-		"type": 0,
-		"power": 80,
-		"acc": 90,
-		"eff": "df10"
-	},
-	"hyper voice": {
-		"type": 0,
-		"power": 90,
-		"acc": 100,
-		"eff": "d"
-	},
-	"hypnosis": {
-		"type": 10,
-		"power": 0,
-		"acc": 60,
-		"eff": "s00100"
-	},
-	"ice ball": {
-		"type": 5,
-		"power": 30,
-		"acc": 90,
-		"eff": "d"
-	},
-	"ice beam": {
-		"type": 5,
-		"power": 95,
-		"acc": 100,
-		"eff": "ds04010"
-	},
-	"ice burn": {
-		"type": 5,
-		"power": 140,
-		"acc": 90,
-		"eff": "ds01030"
-	},
-	"ice fang": {
-		"type": 5,
-		"power": 65,
-		"acc": 95,
-		"eff": "ds04010f10"
-	},
-	"ice punch": {
-		"type": 5,
-		"power": 75,
-		"acc": 100,
-		"eff": "ds04010"
-	},
-	"ice shard": {
-		"type": 5,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"icicle crash": {
-		"type": 5,
-		"power": 85,
-		"acc": 90,
-		"eff": "df30"
-	},
-	"icicle spear": {
-		"type": 5,
-		"power": 25,
-		"acc": 100,
-		"eff": "d"
-	},
-	"icy wind": {
-		"type": 5,
-		"power": 55,
-		"acc": 95,
-		"eff": "dm02100-1"
-	
-	"imprison": {
-	
-	
-	
-	
-	
-	},
-	"incinerate": {
-		"type": 1,
-		"power": 30,
-		"acc": 100,
-		"eff": "d"
-	},
-	"inferno": {
-		"type": 1,
-		"power": 100,
-		"acc": 50,
-		"eff": "ds01100"
-	},
-	"ingrain": {
-		"type": 4,
-		"power": 0,
-		"acc": 100,
-		"eff": "h06"
-	},
-	"iron defense": {
-		"type": 16,
-		"power": 0,
-		"eff": "m11100+2"
-	Name: iron defense,
-		"acc": -1,
-	},
-	"iron head": {
-		"type": 16,
-		"power": 80,
-		"acc": 100,
-		"eff": "df30"
-	},
-	"iron tail": {
-		"type": 16,
-		"power": 100,
-		"acc": 75,
-		"eff": "dm01010-1"
-	},
-	"judgment": {
-		"type": 0,
-		"power": 100,
-		"acc": 100,
-		"eff": "d"
-	},
-	"jump kick": {
-		"type": 6,
-		"power": 100,
-		"acc": 95,
-		"eff": "dr150"
-	},
-	"karate chop": {
-		"type": 6,
-		"power": 50,
-		"acc": 100,
-		"eff": "d"
-	
-	"kinesis": {
-	
-	
-	
-	
-	
-	},
-	"knock off": {
-		"type": 15,
-		"power": 20,
-		"acc": 100,
-		"eff": "du050"
-	Name: knock off,
-	},
-	"last resort": {
-		"type": 0,
-		"power": 140,
-		"acc": 100,
-		"eff": "d"
-	},
-	"lava plume": {
-		"type": 1,
-		"power": 80,
-		"acc": 100,
-		"eff": "ds01030"
-	},
-	"leaf blade": {
-		"type": 4,
-		"power": 90,
-		"acc": 100,
-		"eff": "d"
-	},
-	"leaf storm": {
-		"type": 4,
-		"power": 140,
-		"acc": 90,
-		"eff": "dm10100-2"
-	},
-	"leaf tornado": {
-		"type": 4,
-		"power": 65,
-		"acc": 90,
-		"eff": "d"
-	},
-	"leech life": {
-		"type": 11,
-		"power": 20,
-		"acc": 100,
-		"eff": "dh150"
-	},
-	"leech seed": {
-		"type": 4,
-		"power": 0,
-		"acc": 90,
-		"eff": "h06"
-	},
-	"leer": {
-		"type": 0,
-		"power": 0,
-		"acc": 100,
-		"eff": "m01100-1"
-	},
-	"lick": {
-		"type": 13,
-		"power": 20,
-		"acc": 100,
-		"eff": "ds03030"
-	},
-	"light screen": {
-		"type": 10,
-		"power": 0,
-		"eff": "m11100+2"
-	Name: light screen,
-		"acc": -1,
-	
-	"lock-on": {
-	
-	
-	
-	
-	
-	},
-	"lovely kiss": {
-		"type": 0,
-		"power": 0,
-		"acc": 75,
-		"eff": "s00100"
-	},
-	"low kick": {
-		"type": 6,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"low sweep": {
-		"type": 6,
-		"power": 60,
-		"acc": 100,
-		"eff": "dm02100-1"
-	
-	"lucky chant": {
-	
-	
-	
-	
-	
-	"lunar dance": {
-	
-	
-	
-	
-	},
-	"luster purge": {
-		"type": 10,
-		"power": 70,
-		"acc": 100,
-		"eff": "dm01050-1"
-	},
-	"mach punch": {
-		"type": 6,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	
-	"magic coat": {
-	
-	
-	
-	
-	
-	
-	"magic room": {
-	
-	
-	
-	
-	},
-	"magical leaf": {
-		"type": 4,
-		"acc": -1,
-		"power": 60,
-		"eff": "d"
-	},
-	"magma storm": {
-		"type": 1,
-		"power": 120,
-		"acc": 75,
-		"eff": "d"
-	},
-	"magnet bomb": {
-		"type": 16,
-		"acc": -1,
-		"power": 60,
-		"eff": "d"
-	
-	"magnet rise": {
-	
-	
-	
-	
-	},
-	"magnitude": {
-		"type": 8,
-	
-		"acc": 100,
-		"eff": "d"
-	
-	"me first": {
-	
-	
-	
-	
-	
-	"mean look": {
-	
-	
-	
-	
-	
-	},
-	"meditate": {
-		"type": 10,
-		"power": 0,
-		"eff": "m10100+1"
-	Name: meditate,
-		"acc": -1,
-	},
-	"mega drain": {
-		"type": 4,
-		"power": 40,
-		"acc": 100,
-		"eff": "dh150"
-	},
-	"mega kick": {
-		"type": 0,
-		"power": 120,
-		"acc": 75,
-		"eff": "d"
-	},
-	"mega punch": {
-		"type": 0,
-		"power": 80,
-		"acc": 85,
-		"eff": "d"
-	},
-	"megahorn": {
-		"type": 11,
-		"power": 120,
-		"acc": 85,
-		"eff": "d"
-	
-	"memento": {
-	
-	
-	
-	
-	
-	},
-	"metal burst": {
-		"type": 16,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"metal claw": {
-		"type": 16,
-		"power": 50,
-		"acc": 95,
-		"eff": "dm10010+1"
-	},
-	"metal sound": {
-		"type": 16,
-		"power": 0,
-		"acc": 85,
-		"eff": "m01100-2"
-	},
-	"meteor mash": {
-		"type": 16,
-		"power": 100,
-		"acc": 85,
-		"eff": "dm10020+1"
-	
-	"metronome": {
-	
-	
-	
-	
-	},
-	"milk drink": {
-		"type": 0,
-		"power": 0,
-		"eff": "h050"
-	Name: milk drink,
-		"acc": -1,
-	
-	"mimic": {
-	
-	
-	
-	
-	
-	
-	"mind reader": {
-	
-	
-	
-	
-	
-	
-	"minimize": {
-	
-	
-	
-	
-	
-	"miracle eye": {
-	
-	
-	
-	
-	
-	"mirror coat": {
-	
-	
-	
-	
-	
-	
-	"mirror move": {
-	
-	
-	
-	
-	},
-	"mirror shot": {
-		"type": 16,
-		"power": 65,
-		"acc": 85,
-		"eff": "d"
-	
-	"mist": {
-	
-	
-	
-	
-	},
-	"mist ball": {
-		"type": 10,
-		"power": 70,
-		"acc": 100,
-		"eff": "dm00050-1"
-	},
-	"moonlight": {
-		"type": 0,
-		"power": 0,
-		"eff": "h050"
-	Name: moonlight,
-		"acc": -1,
-	},
-	"morning sun": {
-		"type": 0,
-		"power": 0,
-		"eff": "h050"
-		"acc": -1,
-	},
-	"mud bomb": {
-		"type": 8,
-		"power": 65,
-		"acc": 85,
-		"eff": "d"
-	},
-	"mud shot": {
-		"type": 8,
-		"power": 55,
-		"acc": 95,
-		"eff": "dm02100-1"
-	
-	"mud sport": {
-	
-	
-	
-	
-	
-	},
-	"mud-slap": {
-		"type": 8,
-		"power": 20,
-		"acc": 100,
-		"eff": "d"
-	},
-	"muddy water": {
-		"type": 2,
-		"power": 95,
-		"acc": 85,
-		"eff": "d"
-	},
-	"nasty plot": {
-		"type": 15,
-		"power": 0,
-		"eff": "m10100+2"
-	Name: nasty plot,
-		"acc": -1,
-	},
-	"natural gift": {
-		"type": 0,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"nature power": {
-		"type": 0,
-		"power": 0,
-		"acc": 95,
-		"eff": "d"
-	},
-	"needle arm": {
-		"type": 4,
-		"power": 60,
-		"acc": 100,
-		"eff": "df30"
-	},
-	"night daze": {
-		"type": 15,
-		"power": 85,
-		"acc": 95,
-		"eff": "d"
-	},
-	"night shade": {
-		"type": 13,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"night slash": {
-		"type": 15,
-		"power": 70,
-		"acc": 100,
-		"eff": "d"
-	
-	"nightmare": {
-	
-	
-	
-	
-	
-	},
-	"octazooka": {
-		"type": 2,
-		"power": 65,
-		"acc": 85,
-		"eff": "d"
-	
-	"odor sleuth": {
-	
-	
-	
-	
-	
-	},
-	"ominous wind": {
-		"type": 13,
-		"power": 60,
-		"acc": 100,
-		"eff": "d"
-	},
-	"outrage": {
-		"type": 14,
-		"power": 120,
-		"acc": 100,
-		"eff": "ds15100"
-	},
-	"overheat": {
-		"type": 1,
-		"power": 140,
-		"acc": 90,
-		"eff": "dm10100-2"
-	
-	"pain split": {
-	
-	
-	
-	
-	
-	},
-	"pay day": {
-		"type": 0,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"payback": {
-		"type": 15,
-		"power": 50,
-		"acc": 100,
-		"eff": "d"
-	},
-	"peck": {
-		"type": 9,
-		"power": 35,
-		"acc": 100,
-		"eff": "d"
-	
-	"perish song": {
-	
-	
-	
-	
-	},
-	"petal dance": {
-		"type": 4,
-		"power": 120,
-		"acc": 100,
-		"eff": "ds05100"
-	},
-	"pin missile": {
-		"type": 11,
-		"power": 14,
-		"acc": 85,
-		"eff": "d"
-	},
-	"pluck": {
-		"type": 9,
-		"power": 60,
-		"acc": 100,
-		"eff": "d"
-	},
-	"poison fang": {
-		"type": 7,
-		"power": 50,
-		"acc": 100,
-		"eff": "ds02020"
-	},
-	"poison gas": {
-		"type": 7,
-		"power": 0,
-		"acc": 80,
-		"eff": "s02100"
-	},
-	"poison jab": {
-		"type": 7,
-		"power": 80,
-		"acc": 100,
-		"eff": "ds02030"
-	},
-	"poison sting": {
-		"type": 7,
-		"power": 15,
-		"acc": 100,
-		"eff": "ds02030"
-	},
-	"poison tail": {
-		"type": 7,
-		"power": 50,
-		"acc": 100,
-		"eff": "ds02010"
-	},
-	"poisonpowder": {
-		"type": 7,
-		"power": 0,
-		"acc": 75,
-		"eff": "s02100"
-	},
-	"pound": {
-		"type": 0,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"powder snow": {
-		"type": 5,
-		"power": 40,
-		"acc": 100,
-		"eff": "ds04010"
-	},
-	"power gem": {
-		"type": 12,
-		"power": 70,
-		"acc": 100,
-		"eff": "d"
-	
-	"power split": {
-	
-	
-	
-	
-	
-	"power swap": {
-	
-	
-	
-	
-	
-	"power trick": {
-	
-	
-	
-	
-	},
-	"power whip": {
-		"type": 4,
-		"power": 120,
-		"acc": 85,
-		"eff": "d"
-	},
-	"present": {
-		"type": 0,
-	
-		"acc": 90,
-		"eff": "d"
-	
-	"protect": {
-	
-	
-	
-	
-	},
-	"psybeam": {
-		"type": 10,
-		"power": 65,
-		"acc": 100,
-		"eff": "ds05010"
-	
-	"psych up": {
-	
-	
-	
-	
-	},
-	"psychic": {
-		"type": 10,
-		"power": 90,
-		"acc": 100,
-		"eff": "dm01010-1"
-	},
-	"psycho boost": {
-		"type": 10,
-		"power": 140,
-		"acc": 90,
-		"eff": "dm10100-2"
-	},
-	"psycho cut": {
-		"type": 10,
-		"power": 70,
-		"acc": 100,
-		"eff": "d"
-	
-	"psycho shift": {
-	
-	
-	
-	
-	
-	},
-	"psyshock": {
-		"type": 10,
-		"power": 80,
-		"acc": 100,
-		"eff": "d"
-	},
-	"psystrike": {
-		"type": 10,
-		"power": 100,
-		"acc": 100,
-		"eff": "d"
-	},
-	"psywave": {
-		"type": 10,
-	
-		"acc": 80,
-		"eff": "d"
-	},
-	"punishment": {
-		"type": 15,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"pursuit": {
-		"type": 15,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	
-	"quash": {
-	
-	
-	
-	
-	
-	},
-	"quick attack": {
-		"type": 0,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	
-	"quick guard": {
-	
-	
-	
-	
-	},
-	"quiver dance": {
-		"type": 11,
-		"power": 0,
-		"eff": "m10100+1m11100+1m12100+1"
-		"acc": -1,
-	},
-	"rage": {
-		"type": 0,
-		"power": 20,
-		"acc": 100,
-		"eff": "d"
-	
-	"rage powder": {
-	
-	
-	
-	
-	
-	"rain dance": {
-	
-	
-	
-	
-	},
-	"rapid spin": {
-		"type": 0,
-		"power": 20,
-		"acc": 100,
-		"eff": "d"
-	},
-	"razor leaf": {
-		"type": 4,
-		"power": 55,
-		"acc": 95,
-		"eff": "d"
-	},
-	"razor shell": {
-		"type": 2,
-		"power": 75,
-		"acc": 95,
-		"eff": "dm01050-1"
-	},
-	"razor wind": {
-		"type": 0,
-		"power": 80,
-		"acc": 100,
-		"eff": "d"
-	Name: razor wind,
-	},
-	"recover": {
-		"type": 0,
-		"power": 0,
-		"eff": "h050"
-		"acc": -1,
-	
-	"recycle": {
-	
-	
-	
-	
-	
-	},
-	"reflect": {
-		"type": 10,
-		"power": 0,
-		"eff": "m11100+2"
-		"acc": -1,
-	
-	"reflect 	"type"": {
-	
-	
-	
-	
-	
-	},
-	"refresh": {
-		"type": 0,
-		"power": 0,
-		"acc": 100,
-		"eff": "c100"
-	},
-	"relic song": {
-		"type": 0,
-		"power": 75,
-		"acc": 100,
-		"eff": "ds00010"
-	},
-	"rest": {
-		"type": 10,
-		"power": 0,
-		"eff": "h0100c100s10100"
-		"acc": -1,
-	},
-	"retaliate": {
-		"type": 0,
-		"power": 70,
-		"acc": 100,
-		"eff": "d"
-	},
-	"return": {
-		"type": 0,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"revenge": {
-		"type": 6,
-		"power": 60,
-		"acc": 100,
-		"eff": "d"
-	},
-	"reversal": {
-		"type": 6,
-	
-		"acc": 100,
-		"eff": "d"
-	
-	"roar": {
-	
-	
-	
-	
-	
-	[roar of time],
-		"type": 14,
-		"power": 150,
-		"acc": 90,
-		"eff": "rw"
-	},
-	"rock blast": {
-		"type": 12,
-		"power": 25,
-		"acc": 90,
-		"eff": "d"
-	},
-	"rock climb": {
-		"type": 0,
-		"power": 90,
-		"acc": 85,
-		"eff": "ds05020"
-	},
-	"rock polish": {
-		"type": 12,
-		"power": 0,
-		"eff": "m12100+2"
-	Name: rock polish,
-		"acc": -1,
-	},
-	"rock slide": {
-		"type": 12,
-		"power": 75,
-		"acc": 90,
-		"eff": "df30"
-	},
-	"rock smash": {
-		"type": 6,
-		"power": 40,
-		"acc": 100,
-		"eff": "dm01050-1"
-	},
-	"rock throw": {
-		"type": 12,
-		"power": 50,
-		"acc": 90,
-		"eff": "d"
-	},
-	"rock tomb": {
-		"type": 12,
-		"power": 50,
-		"acc": 80,
-		"eff": "df10"
-	},
-	"rock wrecker": {
-		"type": 12,
-		"power": 150,
-		"acc": 90,
-		"eff": "dw"
-	
-	"role play": {
-	
-	
-	
-	
-	
-	},
-	"rolling kick": {
-		"type": 6,
-		"power": 60,
-		"acc": 85,
-		"eff": "df30"
-	},
-	"rollout": {
-		"type": 12,
-		"power": 30,
-		"acc": 90,
-		"eff": "d"
-	},
-	"roost": {
-		"type": 9,
-		"power": 0,
-		"eff": "h050"
-		"acc": -1,
-	},
-	"round": {
-		"type": 0,
-		"power": 60,
-		"acc": 100,
-		"eff": "d"
-	},
-	"sacred fire": {
-		"type": 1,
-		"power": 100,
-		"acc": 95,
-		"eff": "ds01050"
-	},
-	"sacred sword": {
-		"type": 6,
-		"power": 90,
-		"acc": 100,
-		"eff": "d"
-	},
-	"safeguard": {
-		"type": 0,
-		"power": 0,
-		"eff": "c100"
-		"acc": -1,
-	},
-	"sand tomb": {
-		"type": 8,
-		"power": 35,
-		"acc": 85,
-		"eff": "d"
-	
-	"sand-attack": {
-	
-	
-	
-	
-	
-	
-	"sandstorm": {
-	
-	
-	
-	
-	},
-	"scald": {
-		"type": 2,
-		"power": 80,
-		"acc": 100,
-		"eff": "ds01030"
-	},
-	"scary face": {
-		"type": 0,
-		"power": 0,
-		"acc": 100,
-		"eff": "m02100-2"
-	},
-	"scratch": {
-		"type": 0,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"screech": {
-		"type": 0,
-		"power": 0,
-		"acc": 85,
-		"eff": "m01100-2"
-	},
-	"searing shot": {
-		"type": 1,
-		"power": 100,
-		"acc": 100,
-		"eff": "ds01030"
-	},
-	"secret power": {
-		"type": 0,
-		"power": 70,
-		"acc": 100,
-		"eff": "ds03030"
-	},
-	"secret sword": {
-		"type": 6,
-		"power": 85,
-		"acc": 100,
-		"eff": "d"
-	},
-	"seed bomb": {
-		"type": 4,
-		"power": 80,
-		"acc": 100,
-		"eff": "d"
-	},
-	"seed flare": {
-		"type": 4,
-		"power": 120,
-		"acc": 85,
-		"eff": "dm01040-2"
-	},
-	"seismic toss": {
-		"type": 6,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"selfdestruct": {
-		"type": 0,
-		"power": 200,
-		"acc": 100,
-		"eff": "dr1100"
-	},
-	"shadow ball": {
-		"type": 13,
-		"power": 80,
-		"acc": 100,
-		"eff": "dm01020-1"
-	},
-	"shadow claw": {
-		"type": 13,
-		"power": 70,
-		"acc": 100,
-		"eff": "d"
-	},
-	"shadow force": {
-		"type": 13,
-		"power": 120,
-		"acc": 100,
-		"eff": "d"
-	},
-	"shadow punch": {
-		"type": 13,
-		"acc": -1,
-		"power": 60,
-		"eff": "d"
-	},
-	"shadow sneak": {
-		"type": 13,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"sharpen": {
-		"type": 0,
-		"acc": -1,
-		"power": 0,
-		"eff": "m10100+1"
-	},
-	"sheer cold": {
-		"type": 5,
-		"acc": 30,
-		"power": -1,
-		"eff": "d"
-	},
-	"shell smash": {
-		"type": 0,
-		"acc": -1,
-		"power": 0,
-		"eff": "m11100-1m10100+2m12100+2"
-	},
-	"shift gear": {
-		"type": 16,
-		"power": 0,
-		"eff": "m12100+2m10100+1"
-		"acc": -1,
-	},
-	"shock wave": {
-		"type": 3,
-		"acc": -1,
-		"power": 60,
-		"eff": "d"
-	},
-	"signal beam": {
-		"type": 11,
-		"power": 75,
-		"acc": 100,
-		"eff": "ds05010"
-	},
-	"silver wind": {
-		"type": 11,
-		"power": 60,
-		"acc": 100,
-		"eff": "d"
-	
-	"simple beam": {
-	
-	
-	
-	
-	
-	},
-	"sing": {
-		"type": 0,
-		"power": 0,
-		"acc": 55,
-		"eff": "s00100"
-	
-	"sketch": {
-	
-	
-	
-	
-	
-	"skill swap": {
-	
-	
-	
-	
-	
-	},
-	"skull bash": {
-		"type": 0,
-		"power": 100,
-		"acc": 100,
-		"eff": "d"
-	},
-	"sky attack": {
-		"type": 9,
-		"power": 140,
-		"acc": 90,
-		"eff": "d"
-	},
-	"sky drop": {
-		"type": 9,
-		"power": 60,
-		"acc": 100,
-		"eff": "d"
-	},
-	"sky uppercut": {
-		"type": 6,
-		"power": 85,
-		"acc": 90,
-		"eff": "d"
-	
-	"slack off": {
-	
-	
-	
-	
-	
-	},
-	"slam": {
-		"type": 0,
-		"power": 80,
-		"acc": 75,
-		"eff": "d"
-	},
-	"slash": {
-		"type": 0,
-		"power": 70,
-		"acc": 100,
-		"eff": "d"
-	},
-	"sleep powder": {
-		"type": 4,
-		"power": 0,
-		"acc": 75,
-		"eff": "s00100"
-	
-	"sleep talk": {
-	
-	
-	
-	
-	},
-	"sludge": {
-		"type": 7,
-		"power": 65,
-		"acc": 100,
-		"eff": "ds02030"
-	},
-	"sludge bomb": {
-		"type": 7,
-		"power": 90,
-		"acc": 100,
-		"eff": "ds02030"
-	},
-	"sludge wave": {
-		"type": 7,
-		"power": 95,
-		"acc": 100,
-		"eff": "ds02010"
-	},
-	"smack down": {
-		"type": 12,
-		"power": 50,
-		"acc": 100,
-		"eff": "d"
-	},
-	"smellingsalt": {
-		"type": 0,
-		"power": 60,
-		"acc": 100,
-		"eff": "d"
-	},
-	"smog": {
-		"type": 7,
-		"power": 20,
-		"acc": 70,
-		"eff": "ds02040"
-	
-	"smokescreen": {
-	
-	
-	
-	
-	
-	},
-	"snarl": {
-		"type": 15,
-		"power": 55,
-		"acc": 95,
-		"eff": "dm00100-1"
-	
-	"snatch": {
-	
-	
-	
-	
-	
-	},
-	"snore": {
-		"type": 0,
-		"power": 40,
-		"acc": 100,
-		"eff": "df30"
-	
-	"soak": {
-	
-	
-	
-	
-	
-	
-	"softboiled": {
-	
-	
-	
-	
-	
-	},
-	"solarbeam": {
-		"type": 4,
-		"power": 120,
-		"acc": 100,
-		"eff": "d"
-	},
-	"sonicboom": {
-		"type": 0,
-	
-		"acc": 90,
-		"eff": "d20"
-	},
-	"spacial rend": {
-		"type": 14,
-		"power": 100,
-		"acc": 95,
-		"eff": "d"
-	},
-	"spark": {
-		"type": 3,
-		"power": 65,
-		"acc": 100,
-		"eff": "ds03030"
-	
-	"spider web": {
-	
-	
-	
-	
-	
-	},
-	"spike cannon": {
-		"type": 0,
-		"power": 20,
-		"acc": 100,
-		"eff": "d"
-	
-	"spikes": {
-	
-	
-	
-	
-	},
-	"spit up": {
-		"type": 0,
-	
-		"acc": 100,
-		"eff": "d"
-	
-	"spite": {
-	
-	
-	
-	
-	
-	},
-	"splash": {
-		"type": 0,
-		"acc": 0,
-		"power": 0,
-		"eff": "0"
-	Name: splash,
-	},
-	"spore": {
-		"type": 4,
-		"power": 0,
-		"acc": 100,
-		"eff": "s00100"
-	
-	"stealth rock": {
-	
-	
-	
-	
-	},
-	"steamroller": {
-		"type": 11,
-		"power": 65,
-		"acc": 100,
-		"eff": "df30"
-	},
-	"steel wing": {
-		"type": 16,
-		"power": 70,
-		"acc": 90,
-		"eff": "dm11010+1"
-	
-	"stockpile": {
-	
-	
-	
-	
-	},
-	"stomp": {
-		"type": 0,
-		"power": 65,
-		"acc": 100,
-		"eff": "df30"
-	},
-	"stone edge": {
-		"type": 12,
-		"power": 100,
-		"acc": 80,
-		"eff": "d"
-	},
-	"stored power": {
-		"type": 10,
-		"power": 20,
-		"acc": 100,
-		"eff": "d"
-	},
-	"storm throw": {
-		"type": 6,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"strength": {
-		"type": 0,
-		"power": 80,
-		"acc": 100,
-		"eff": "d"
-	},
-	"string shot": {
-		"type": 11,
-		"power": 0,
-		"acc": 95,
-		"eff": "m02100-1"
-	},
-	"struggle": {
-		"type": 0,
-		"power": 50,
-		"acc": 100,
-		"eff": "d"
-	},
-	"struggle bug": {
-		"type": 11,
-		"power": 30,
-		"acc": 100,
-		"eff": "dm00100-1"
-	},
-	"stun spore": {
-		"type": 4,
-		"power": 0,
-		"acc": 75,
-		"eff": "s03100"
-	},
-	"submission": {
-		"type": 6,
-		"power": 80,
-		"acc": 80,
-		"eff": "dr0025"
-	
-	"substitute": {
-	
-	
-	
-	
-	},
-	"sucker punch": {
-		"type": 15,
-		"power": 80,
-		"acc": 100,
-		"eff": "d"
-	
-	"sunny day": {
-	
-	
-	
-	
-	},
-	"super fang": {
-		"type": 0,
-	
-		"acc": 90,
-		"eff": "d"
-	},
-	"superpower": {
-		"type": 6,
-		"power": 120,
-		"acc": 100,
-		"eff": "dm10100-1m11100-1"
-	},
-	"supersonic": {
-		"type": 0,
-		"power": 0,
-		"acc": 55,
-		"eff": "s05100"
-	},
-	"surf": {
-		"type": 2,
-		"power": 95,
-		"acc": 100,
-		"eff": "d"
-	},
-	"swagger": {
-		"type": 0,
-		"power": 0,
-		"acc": 90,
-		"eff": "s05100m00100+2"
-	
-	"swallow": {
-	
-	
-	
-	
-	},
-	"sweet kiss": {
-		"type": 0,
-		"power": 0,
-		"acc": 75,
-		"eff": "s00100"
-	
-	"sweet scent": {
-	
-	
-	
-	
-	
-	},
-	"swift": {
-		"type": 0,
-		"acc": -1,
-		"power": 60,
-		"eff": "d"
-	
-	"switcheroo": {
-	
-	
-	
-	
-	
-	},
-	"swords dance": {
-		"type": 0,
-		"power": 0,
-		"eff": "m10100+2"
-	Name: swords dance,
-		"acc": -1,
-	},
-	"synchronoise": {
-		"type": 10,
-		"power": 70,
-		"acc": 100,
-		"eff": "d"
-	
-	"synthesis": {
-	
-	
-	
-	
-	},
-	"tackle": {
-		"type": 0,
-		"power": 50,
-		"acc": 100,
-		"eff": "d"
-	},
-	"tail glow": {
-		"type": 11,
-		"power": 0,
-		"acc": 100,
-		"eff": "m00100+2"
-	},
-	"tail slap": {
-		"type": 0,
-		"power": 25,
-		"acc": 85,
-		"eff": "d"
-	},
-	"tail whip": {
-		"type": 0,
-		"power": 0,
-		"acc": 100,
-		"eff": "m01100-1"
-	},
-	"tailwind": {
-		"type": 9,
-		"power": 0,
-		"eff": "m12100+2"
-	Name: tailwind,
-		"acc": -1,
-	},
-	"take down": {
-		"type": 0,
-		"power": 90,
-		"acc": 85,
-		"eff": "dr0025"
-	
-	"taunt": {
-	
-	
-	
-	
-	
-	},
-	"techno blast": {
-		"type": 0,
-		"power": 85,
-		"acc": 100,
-		"eff": "d"
-	},
-	"teeter dance": {
-		"type": 0,
-		"power": 0,
-		"acc": 100,
-		"eff": "s05100"
-	
-	"telekinesis": {
-	
-	
-	
-	
-	
-	"teleport": {
-	
-	
-	
-	
-	},
-	"thief": {
-		"type": 15,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"thrash": {
-		"type": 0,
-		"power": 120,
-		"acc": 100,
-		"eff": "d"
-	},
-	"thunder": {
-		"type": 3,
-		"power": 120,
-		"acc": 70,
-		"eff": "ds03030"
-	},
-	"thunder fang": {
-		"type": 3,
-		"power": 65,
-		"acc": 95,
-		"eff": "ds03010"
-	},
-	"thunder wave": {
-		"type": 3,
-		"power": 0,
-		"acc": 100,
-		"eff": "s03100"
-	},
-	"thunderbolt": {
-		"type": 3,
-		"power": 95,
-		"acc": 100,
-		"eff": "ds03010"
-	},
-	"thunderpunch": {
-		"type": 3,
-		"power": 75,
-		"acc": 100,
-		"eff": "ds03010"
-	},
-	"thundershock": {
-		"type": 3,
-		"power": 40,
-		"acc": 100,
-		"eff": "ds03010"
-	},
-	"tickle": {
-		"type": 0,
-		"power": 0,
-		"acc": 100,
-		"eff": "m00100-1m01100-1"
-	
-	"torment": {
-	
-	
-	
-	
-	
-	},
-	"toxic": {
-		"type": 7,
-		"power": 0,
-		"acc": 90,
-		"eff": "s02100"
-	
-	"toxic spikes": {
-	
-	
-	
-	
-	
-	"transform": {
-	
-	
-	
-	
-	},
-	"tri attack": {
-		"type": 0,
-		"power": 80,
-		"acc": 100,
-		"eff": "ds01006s03006s04006"
-	
-	"trick": {
-	
-	
-	
-	
-	
-	
-	"trick room": {
-	
-	
-	
-	
-	},
-	"triple kick": {
-		"type": 6,
-		"power": 10,
-		"acc": 90,
-		"eff": "d"
-	},
-	"trump card": {
-		"type": 0,
-	
-		"eff": "d"
-		"acc": 100,
-	},
-	"twineedle": {
-		"type": 11,
-		"power": 25,
-		"acc": 100,
-		"eff": "ds02020"
-	},
-	"twister": {
-		"type": 14,
-		"power": 40,
-		"acc": 100,
-		"eff": "df20"
-	},
-	"u-turn": {
-		"type": 11,
-		"power": 70,
-		"acc": 100,
-		"eff": "d"
-	},
-	"uproar": {
-		"type": 0,
-		"power": 90,
-		"acc": 100,
-		"eff": "d"
-	},
-	"v-create": {
-		"type": 1,
-		"power": 180,
-		"acc": 95,
-		"eff": "dm11100-1m12100-1"
-	},
-	"vacuum wave": {
-		"type": 6,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"venoshock": {
-		"type": 7,
-		"power": 65,
-		"acc": 100,
-		"eff": "d"
-	},
-	"vicegrip": {
-		"type": 0,
-		"power": 55,
-		"acc": 100,
-		"eff": "d"
-	},
-	"vine whip": {
-		"type": 4,
-		"power": 35,
-		"acc": 100,
-		"eff": "d"
-	},
-	"vital throw": {
-		"type": 6,
-		"power": 70,
-		"acc": -1,
-		"eff": "d"
-	},
-	"volt switch": {
-		"type": 3,
-		"power": 70,
-		"acc": 100,
-		"eff": "d"
-	},
-	"volt tackle": {
-		"type": 3,
-		"power": 120,
-		"acc": 100,
-		"eff": "ds03010r0033"
-	[wake-up slap],
-		"type": 6,
-		"power": 60,
-		"acc": 100,
-		"eff": "d"
-	},
-	"water gun": {
-		"type": 2,
-		"power": 40,
-		"acc": 100,
-		"eff": "d"
-	},
-	"water pledge": {
-		"type": 2,
-		"power": 50,
-		"acc": 100,
-		"eff": "d"
-	},
-	"water pulse": {
-		"type": 2,
-		"power": 60,
-		"acc": 100,
-		"eff": "ds05020"
-	
-	"water sport": {
-	
-	
-	
-	
-	
-	},
-	"water spout": {
-		"type": 2,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"waterfall": {
-		"type": 2,
-		"power": 80,
-		"acc": 100,
-		"eff": "df20"
-	},
-	"weather ball": {
-		"type": 0,
-		"power": 50,
-		"acc": 100,
-		"eff": "d"
-	},
-	"whirlpool": {
-		"type": 2,
-		"power": 35,
-		"acc": 85,
-		"eff": "d"
-	
-	"whirlwind": {
-	
-	
-	
-	
-	
-	
-	"wide guard": {
-	
-	
-	
-	
-	},
-	"wild charge": {
-		"type": 3,
-		"power": 90,
-		"acc": 100,
-		"eff": "dr0025"
-	[will-o-wisp],
-		"type": 1,
-		"power": 0,
-		"acc": 75,
-		"eff": "s01100"
-	},
-	"wing attack": {
-		"type": 9,
-		"power": 60,
-		"acc": 100,
-		"eff": "d"
-	
-	"wish": {
-	
-	
-	
-	
-	
-	},
-	"withdraw": {
-		"type": 2,
-		"power": 0,
-		"eff": "m11100+1"
-	Name: withdraw,
-		"acc": -1,
-	
-	"wonder room": {
-	
-	
-	
-	
-	},
-	"wood hammer": {
-		"type": 4,
-		"power": 120,
-		"acc": 100,
-		"eff": "dr0033"
-	},
-	"work up": {
-		"type": 0,
-		"power": 0,
-		"eff": "m10100+1"
-	Name: work up,
-		"acc": -1,
-	
-	"worry seed": {
-	
-	
-	
-	
-	
-	},
-	"wrap": {
-		"type": 0,
-		"power": 15,
-		"acc": 90,
-		"eff": "d"
-	},
-	"wring out": {
-		"type": 0,
-	
-		"acc": 100,
-		"eff": "d"
-	},
-	"x-scissor": {
-		"type": 11,
-		"power": 80,
-		"acc": 100,
-		"eff": "d"
-	
-	"yawn": {
-	
-	
-	
-	
-	
-	},
-	"zap cannon": {
-		"type": 3,
-		"power": 120,
-		"acc": 50,
-		"eff": "ds03100"
-	},
-	"zen headbutt": {
-		"type": 10,
-		"power": 80,
-		"acc": 90,
-		"eff": "df10"
-	,
+  "absorb":{
+    "type":4,
+    "power":20,
+    "acc":100,
+    "effect":"dh1050"
+  },
+  "acid":{
+    "type":7,
+    "power":40,
+    "acc":100,
+    "effect":"dm01010-1"
+  },
+  "acid armor":{
+    "type":7,
+    "power":0,
+    "acc":-1,
+    "effect":"m11100+2"
+  },
+  "acid spray":{
+    "type":7,
+    "power":40,
+    "acc":100,
+    "effect":"dm03010-1"
+  },
+  "acrobatics":{
+    "type":9,
+    "power":55,
+    "acc":100,
+    "effect":"d"
+  },
+  "acupressure":{
+    "type":0,
+    "power":0,
+    "acc":-1,
+    "effect":"m1x+2100"
+  },
+  "aerial ace":{
+    "type":9,
+    "power":60,
+    "acc":-1,
+    "effect":"d"
+  },
+  "aeroblast":{
+    "type":9,
+    "power":100,
+    "acc":95,
+    "effect":"d"
+  },
+  "agility":{
+    "type":10,
+    "power":0,
+    "acc":-1,
+    "effect":"m12100+2"
+  },
+  "air cutter":{
+    "type":9,
+    "power":55,
+    "acc":95,
+    "effect":"d"
+  },
+  "air slash":{
+    "type":9,
+    "power":75,
+    "acc":95,
+    "effect":"df30"
+  },
+  "amnesia":{
+    "type":10,
+    "power":0,
+    "acc":-1,
+    "effect":"m13100+2"
+  },
+  "ancientpower":{
+    "type":12,
+    "power":60,
+    "acc":100,
+    "effect":"dm1x+1010"
+  },
+  "aqua jet":{
+    "type":2,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "aqua ring":{
+    "type":2,
+    "power":0,
+    "acc":-1,
+    "effect":"h06"
+  },
+  "aqua tail":{
+    "type":2,
+    "power":90,
+    "acc":90,
+    "effect":"d"
+  },
+  "arm thrust":{
+    "type":6,
+    "power":15,
+    "acc":100,
+    "effect":"d"
+  },
+  "aromatherapy":{
+    "type":4,
+    "power":0,
+    "acc":-1,
+    "effect":"c100"
+  },
+  "assurance":{
+    "type":15,
+    "power":50,
+    "acc":100,
+    "effect":"d"
+  },
+  "astonish":{
+    "type":13,
+    "power":30,
+    "acc":100,
+    "effect":"df30"
+  },
+  "attack order":{
+    "type":11,
+    "power":90,
+    "acc":100,
+    "effect":"dc100"
+  },
+  "attract":{
+    "type":0,
+    "power":0,
+    "acc":100,
+    "effect":"s06100"
+  },
+  "aura sphere":{
+    "type":6,
+    "power":90,
+    "acc":-1,
+    "effect":"d"
+  },
+  "aurora beam":{
+    "type":5,
+    "power":65,
+    "acc":100,
+    "effect":"ds04010"
+  },
+  "autotomize":{
+    "type":16,
+    "power":0,
+    "acc":-1,
+    "effect":"m12100+2"
+  },
+  "avalanche":{
+    "type":5,
+    "power":60,
+    "acc":100,
+    "effect":"d"
+  },
+  "barrage":{
+    "type":0,
+    "power":15,
+    "acc":85,
+    "effect":"d"
+  },
+  "barrier":{
+    "type":10,
+    "power":0,
+    "acc":-1,
+    "effect":"m11100+2"
+  },
+  "belly drum":{
+    "type":0,
+    "power":0,
+    "acc":-1,
+    "effect":"r1050m10100+6"
+  },
+  "bide":{
+    "type":0,
+    "acc":100,
+    "effect":"d"
+  },
+  "bind":{
+    "type":0,
+    "power":15,
+    "acc":85,
+    "effect":"ds03050"
+  },
+  "bite":{
+    "type":15,
+    "power":60,
+    "acc":100,
+    "effect":"df30"
+  },
+  "blast burn":{
+    "type":1,
+    "power":150,
+    "acc":90,
+    "effect":"dw"
+  },
+  "blaze kick":{
+    "type":1,
+    "power":85,
+    "acc":90,
+    "effect":"ds01010"
+  },
+  "blizzard":{
+    "type":5,
+    "power":120,
+    "acc":70,
+    "effect":"ds04010"
+  },
+  "blue flare":{
+    "type":1,
+    "power":130,
+    "acc":85,
+    "effect":"ds01020"
+  },
+  "body slam":{
+    "type":0,
+    "power":85,
+    "acc":100,
+    "effect":"ds03099"
+  },
+  "bolt strike":{
+    "type":3,
+    "power":130,
+    "acc":85,
+    "effect":"ds03020"
+  },
+  "bone club":{
+    "type":8,
+    "power":65,
+    "acc":85,
+    "effect":"df10"
+  },
+  "bone rush":{
+    "type":8,
+    "power":25,
+    "acc":90,
+    "effect":"d"
+  },
+  "bonemerang":{
+    "type":8,
+    "power":50,
+    "acc":90,
+    "effect":"d"
+  },
+  "bounce":{
+    "type":9,
+    "power":85,
+    "acc":85,
+    "effect":"ds03030"
+  },
+  "brave bird":{
+    "type":9,
+    "power":120,
+    "acc":100,
+    "effect":"dr0033"
+  },
+  "brick break":{
+    "type":6,
+    "power":75,
+    "acc":100,
+    "effect":"d"
+  },
+  "brine":{
+    "type":2,
+    "power":65,
+    "acc":100,
+    "effect":"d"
+  },
+  "bubble":{
+    "type":2,
+    "power":20,
+    "acc":100,
+    "effect":"dm02010-1"
+  },
+  "bubblebeam":{
+    "type":2,
+    "power":65,
+    "acc":100,
+    "effect":"dm02010-1"
+  },
+  "bug bite":{
+    "type":11,
+    "power":60,
+    "acc":100,
+    "effect":"d"
+  },
+  "bug buzz":{
+    "type":11,
+    "power":90,
+    "acc":100,
+    "effect":"dm03010-1"
+  },
+  "bulk up":{
+    "type":6,
+    "power":0,
+    "acc":-1,
+    "effect":"m10100+1m11100+1"
+  },
+  "bulldoze":{
+    "type":8,
+    "power":60,
+    "acc":100,
+    "effect":"dm02100-1"
+  },
+  "bullet punch":{
+    "type":16,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "bullet seed":{
+    "type":4,
+    "power":25,
+    "acc":100,
+    "effect":"d"
+  },
+  "calm mind":{
+    "type":10,
+    "power":0,
+    "acc":-1,
+    "effect":"m13100+1"
+  },
+  "captivate":{
+    "type":0,
+    "power":0,
+    "acc":100,
+    "effect":"m03050-2"
+  },
+  "charge":{
+    "type":3,
+    "power":0,
+    "acc":100,
+    "effect":"m13100+1"
+  },
+  "charge beam":{
+    "type":3,
+    "power":50,
+    "acc":90,
+    "effect":"dm13070+1"
+  },
+  "charm":{
+    "type":0,
+    "power":0,
+    "acc":100,
+    "effect":"m00100-2"
+  },
+  "chatter":{
+    "type":9,
+    "power":60,
+    "acc":100,
+    "effect":"ds05010"
+  },
+  "chip away":{
+    "type":0,
+    "power":70,
+    "acc":100,
+    "effect":"d"
+  },
+  "circle throw":{
+    "type":6,
+    "power":60,
+    "acc":90,
+    "effect":"d"
+  },
+  "clamp":{
+    "type":2,
+    "power":35,
+    "acc":85,
+    "effect":"d"
+  },
+  "clear smog":{
+    "type":7,
+    "power":50,
+    "acc":-1,
+    "effect":"d"
+  },
+  "close combat":{
+    "type":6,
+    "power":120,
+    "acc":100,
+    "effect":"dm11100-2"
+  },
+  "coil":{
+    "type":7,
+    "power":0,
+    "acc":-1,
+    "effect":"m10100+1m11100+1"
+  },
+  "comet punch":{
+    "type":0,
+    "power":18,
+    "acc":85,
+    "effect":"d"
+  },
+  "confuse ray":{
+    "type":13,
+    "power":0,
+    "acc":100,
+    "effect":"s05100"
+  },
+  "confusion":{
+    "type":10,
+    "power":50,
+    "acc":100,
+    "effect":"ds05010"
+  },
+  "constrict":{
+    "type":0,
+    "power":10,
+    "acc":100,
+    "effect":"d"
+  },
+  "cosmic power":{
+    "type":10,
+    "power":0,
+    "acc":-1,
+    "effect":"m11100+2"
+  },
+  "cotton guard":{
+    "type":4,
+    "power":0,
+    "acc":-1,
+    "effect":"m11100+3"
+  },
+  "cotton spore":{
+    "type":4,
+    "power":0,
+    "acc":100,
+    "effect":"m02100-2"
+  },
+  "counter":{
+    "type":6,
+    "acc":100,
+    "effect":"d"
+  },
+  "covet":{
+    "type":0,
+    "power":60,
+    "acc":100,
+    "effect":"d"
+  },
+  "crabhammer":{
+    "type":2,
+    "power":90,
+    "acc":90,
+    "effect":"d"
+  },
+  "cross chop":{
+    "type":6,
+    "power":100,
+    "acc":80,
+    "effect":"d"
+  },
+  "cross poison":{
+    "type":7,
+    "power":70,
+    "acc":100,
+    "effect":"ds02010"
+  },
+  "crunch":{
+    "type":15,
+    "power":80,
+    "acc":100,
+    "effect":"dm01020-1"
+  },
+  "crush claw":{
+    "type":0,
+    "power":75,
+    "acc":95,
+    "effect":"dm01050-1"
+  },
+  "curse":{
+    "type":13,
+    "power":0,
+    "acc":-1,
+    "effect":"m10100+1m11100+1m12100-1"
+  },
+  "cut":{
+    "type":0,
+    "power":50,
+    "acc":95,
+    "effect":"d"
+  },
+  "dark pulse":{
+    "type":15,
+    "power":80,
+    "acc":100,
+    "effect":"df20"
+  },
+  "dark void":{
+    "type":15,
+    "power":0,
+    "acc":80,
+    "effect":"s00100"
+  },
+  "defend order":{
+    "type":11,
+    "power":0,
+    "acc":-1,
+    "effect":"m11100+1"
+  },
+  "defense curl":{
+    "type":0,
+    "power":0,
+    "acc":-1,
+    "effect":"m11100+1"
+  },
+  "dig":{
+    "type":8,
+    "power":80,
+    "acc":100,
+    "effect":"d"
+  },
+  "discharge":{
+    "type":3,
+    "power":80,
+    "acc":100,
+    "effect":"ds03030"
+  },
+  "dive":{
+    "type":2,
+    "power":80,
+    "acc":100,
+    "effect":"d"
+  },
+  "dizzy punch":{
+    "type":0,
+    "power":70,
+    "acc":100,
+    "effect":"ds05020"
+  },
+  "doom desire":{
+    "type":16,
+    "power":140,
+    "acc":100,
+    "effect":"d"
+  },
+  "double hit":{
+    "type":0,
+    "power":35,
+    "acc":90,
+    "effect":"d"
+  },
+  "double kick":{
+    "type":6,
+    "power":30,
+    "acc":100,
+    "effect":"d"
+  },
+  "double-edge":{
+    "type":0,
+    "power":120,
+    "acc":100,
+    "effect":"dr0033"
+  },
+  "doubleslap":{
+    "type":0,
+    "power":15,
+    "acc":85,
+    "effect":"d"
+  },
+  "draco meteor":{
+    "type":14,
+    "power":140,
+    "acc":90,
+    "effect":"dm10100-2"
+  },
+  "dragon claw":{
+    "type":14,
+    "power":80,
+    "acc":100,
+    "effect":"d"
+  },
+  "dragon dance":{
+    "type":14,
+    "power":0,
+    "acc":-1,
+    "effect":"m10100+1m12100+1"
+  },
+  "dragon pulse":{
+    "type":14,
+    "power":90,
+    "acc":100,
+    "effect":"d"
+  },
+  "dragon rage":{
+    "type":14,
+    "acc":100,
+    "effect":"d40"
+  },
+  "dragon rush":{
+    "type":14,
+    "power":100,
+    "acc":75,
+    "effect":"df20"
+  },
+  "dragon tail":{
+    "type":14,
+    "power":60,
+    "acc":90,
+    "effect":"d"
+  },
+  "dragonbreath":{
+    "type":14,
+    "power":60,
+    "acc":100,
+    "effect":"ds03030"
+  },
+  "drain punch":{
+    "type":6,
+    "power":75,
+    "acc":100,
+    "effect":"dh1050"
+  },
+  "dream eater":{
+    "type":10,
+    "power":100,
+    "acc":100,
+    "effect":"d"
+  },
+  "drill peck":{
+    "type":9,
+    "power":80,
+    "acc":100,
+    "effect":"d"
+  },
+  "drill run":{
+    "type":8,
+    "power":80,
+    "acc":95,
+    "effect":"d"
+  },
+  "dual chop":{
+    "type":14,
+    "power":40,
+    "acc":90,
+    "effect":"d"
+  },
+  "dynamicpunch":{
+    "type":6,
+    "power":100,
+    "acc":50,
+    "effect":"ds05100"
+  },
+  "earth power":{
+    "type":8,
+    "power":90,
+    "acc":100,
+    "effect":"dm01010-1"
+  },
+  "earthquake":{
+    "type":8,
+    "power":100,
+    "acc":100,
+    "effect":"d"
+  },
+  "echoed voice":{
+    "type":0,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "egg bomb":{
+    "type":0,
+    "power":100,
+    "acc":75,
+    "effect":"d"
+  },
+  "electro ball":{
+    "type":3,
+    "acc":100,
+    "effect":"d"
+  },
+  "electroweb":{
+    "type":3,
+    "power":55,
+    "acc":95,
+    "effect":"dm02100-1"
+  },
+  "ember":{
+    "type":1,
+    "power":40,
+    "acc":100,
+    "effect":"ds01010"
+  },
+  "energy ball":{
+    "type":4,
+    "power":80,
+    "acc":100,
+    "effect":"dm01010-1"
+  },
+  "eruption":{
+    "type":1,
+    "acc":100,
+    "effect":"d"
+  },
+  "explosion":{
+    "type":0,
+    "power":250,
+    "acc":100,
+    "effect":"dr1100"
+  },
+  "extrasensory":{
+    "type":10,
+    "power":80,
+    "acc":100,
+    "effect":"df10"
+  },
+  "extremespeed":{
+    "type":0,
+    "power":80,
+    "acc":100,
+    "effect":"d"
+  },
+  "facade":{
+    "type":0,
+    "power":70,
+    "acc":100,
+    "effect":"d"
+  },
+  "faint attack":{
+    "type":15,
+    "power":60,
+    "acc":-1,
+    "effect":"d"
+  },
+  "fake out":{
+    "type":0,
+    "power":40,
+    "acc":100,
+    "effect":"df10"
+  },
+  "fake tears":{
+    "type":15,
+    "power":0,
+    "acc":100,
+    "effect":"m01100-2"
+  },
+  "false swipe":{
+    "type":0,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "featherdance":{
+    "type":9,
+    "power":0,
+    "acc":100,
+    "effect":"m00100-2"
+  },
+  "feint":{
+    "type":0,
+    "power":30,
+    "acc":100,
+    "effect":"d"
+  },
+  "fiery dance":{
+    "type":1,
+    "power":80,
+    "acc":100,
+    "effect":"dm10050+1"
+  },
+  "fire blast":{
+    "type":1,
+    "power":120,
+    "acc":85,
+    "effect":"ds01010"
+  },
+  "fire fang":{
+    "type":1,
+    "power":65,
+    "acc":95,
+    "effect":"ds01010f10"
+  },
+  "fire pledge":{
+    "type":1,
+    "power":50,
+    "acc":100,
+    "effect":"d"
+  },
+  "fire punch":{
+    "type":1,
+    "power":75,
+    "acc":100,
+    "effect":"ds01010"
+  },
+  "fire spin":{
+    "type":1,
+    "power":35,
+    "acc":85,
+    "effect":"d"
+  },
+  "fissure":{
+    "type":8,
+    "acc":30,
+    "power":-1,
+    "effect":"d"
+  },
+  "flame burst":{
+    "type":1,
+    "power":70,
+    "acc":100,
+    "effect":"d"
+  },
+  "flame charge":{
+    "type":1,
+    "power":50,
+    "acc":100,
+    "effect":"dm12100+1"
+  },
+  "flame wheel":{
+    "type":1,
+    "power":60,
+    "acc":100,
+    "effect":"ds01010"
+  },
+  "flamethrower":{
+    "type":1,
+    "power":95,
+    "acc":100,
+    "effect":"ds01010"
+  },
+  "flare blitz":{
+    "type":1,
+    "power":120,
+    "acc":100,
+    "effect":"dr0033"
+  },
+  "flash cannon":{
+    "type":16,
+    "power":80,
+    "acc":100,
+    "effect":"dm01010-1"
+  },
+  "flatter":{
+    "type":15,
+    "power":0,
+    "acc":100,
+    "effect":"m00100+2s05100"
+  },
+  "fling":{
+    "type":15,
+    "acc":100,
+    "effect":"d"
+  },
+  "fly":{
+    "type":9,
+    "power":90,
+    "acc":95,
+    "effect":"d"
+  },
+  "focus blast":{
+    "type":6,
+    "power":120,
+    "acc":70,
+    "effect":"dm01010-1"
+  },
+  "focus punch":{
+    "type":6,
+    "power":150,
+    "acc":100,
+    "effect":"d"
+  },
+  "force palm":{
+    "type":6,
+    "power":60,
+    "acc":100,
+    "effect":"ds03030"
+  },
+  "foul play":{
+    "type":15,
+    "power":95,
+    "acc":100,
+    "effect":"d"
+  },
+  "freeze shock":{
+    "type":5,
+    "power":140,
+    "acc":90,
+    "effect":"ds03030"
+  },
+  "frenzy plant":{
+    "type":4,
+    "power":150,
+    "acc":90,
+    "effect":"dw"
+  },
+  "frost breath":{
+    "type":5,
+    "power":40,
+    "acc":90,
+    "effect":"d"
+  },
+  "fury attack":{
+    "type":0,
+    "power":15,
+    "acc":85,
+    "effect":"d"
+  },
+  "fury cutter":{
+    "type":11,
+    "power":20,
+    "acc":95,
+    "effect":"d"
+  },
+  "fury swipes":{
+    "type":0,
+    "power":18,
+    "acc":80,
+    "effect":"d"
+  },
+  "fusion bolt":{
+    "type":3,
+    "power":100,
+    "acc":100,
+    "effect":"d"
+  },
+  "fusion flare":{
+    "type":1,
+    "power":100,
+    "acc":100,
+    "effect":"d"
+  },
+  "future sight":{
+    "type":10,
+    "power":100,
+    "acc":100,
+    "effect":"d"
+  },
+  "gear grind":{
+    "type":16,
+    "power":50,
+    "acc":85,
+    "effect":"d"
+  },
+  "giga drain":{
+    "type":4,
+    "power":75,
+    "acc":100,
+    "effect":"dh1050"
+  },
+  "giga impact":{
+    "type":0,
+    "power":150,
+    "acc":90,
+    "effect":"dw"
+  },
+  "glaciate":{
+    "type":5,
+    "power":65,
+    "acc":95,
+    "effect":"dm02100-1"
+  },
+  "glare":{
+    "type":0,
+    "power":0,
+    "acc":90,
+    "effect":"s03100"
+  },
+  "grass pledge":{
+    "type":4,
+    "power":50,
+    "acc":100,
+    "effect":"d"
+  },
+  "grasswhistle":{
+    "type":4,
+    "power":0,
+    "acc":55,
+    "effect":"s00100"
+  },
+  "growl":{
+    "type":0,
+    "power":0,
+    "acc":100,
+    "effect":"m00100-1"
+  },
+  "growth":{
+    "type":0,
+    "power":0,
+    "acc":-1,
+    "effect":"m10100+1"
+  },
+  "guillotine":{
+    "type":0,
+    "acc":30,
+    "power":-1,
+    "effect":"d"
+  },
+  "gunk shot":{
+    "type":7,
+    "power":120,
+    "acc":70,
+    "effect":"ds02030"
+  },
+  "gust":{
+    "type":9,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "hammer arm":{
+    "type":6,
+    "power":100,
+    "acc":90,
+    "effect":"dm12100-1"
+  },
+  "harden":{
+    "type":0,
+    "power":0,
+    "effect":"m11100+1",
+    "acc":-1
+  },
+  "head charge":{
+    "type":0,
+    "power":120,
+    "acc":100,
+    "effect":"dr0025"
+  },
+  "head smash":{
+    "type":12,
+    "power":150,
+    "acc":80,
+    "effect":"dr0050"
+  },
+  "headbutt":{
+    "type":0,
+    "power":70,
+    "acc":100,
+    "effect":"df30"
+  },
+  "heal bell":{
+    "type":0,
+    "power":0,
+    "effect":"c100",
+    "acc":-1
+  },
+  "heal order":{
+    "type":11,
+    "power":0,
+    "effect":"h050",
+    "acc":-1
+  },
+  "heal pulse":{
+    "type":10,
+    "power":0,
+    "effect":"h050",
+    "acc":-1
+  },
+  "heart stamp":{
+    "type":10,
+    "power":60,
+    "acc":100,
+    "effect":"df10"
+  },
+  "heat crash":{
+    "type":1,
+    "acc":100,
+    "effect":"d"
+  },
+  "heat wave":{
+    "type":1,
+    "power":100,
+    "acc":90,
+    "effect":"ds01010"
+  },
+  "heavy slam":{
+    "type":16,
+    "acc":100,
+    "effect":"d"
+  },
+  "hex":{
+    "type":13,
+    "power":50,
+    "acc":100,
+    "effect":"d"
+  },
+  "hi jump kick":{
+    "type":6,
+    "power":130,
+    "acc":90,
+    "effect":"dr150"
+  },
+  "hidden power":{
+    "type":0,
+    "acc":100,
+    "effect":"d"
+  },
+  "hone claws":{
+    "type":15,
+    "power":0,
+    "effect":"m10100+1",
+    "acc":-1
+  },
+  "horn attack":{
+    "type":0,
+    "power":65,
+    "acc":100,
+    "effect":"d"
+  },
+  "horn drill":{
+    "type":0,
+    "acc":30,
+    "power":-1,
+    "effect":"d"
+  },
+  "horn leech":{
+    "type":4,
+    "power":75,
+    "acc":100,
+    "effect":"dh150"
+  },
+  "howl":{
+    "type":0,
+    "power":0,
+    "effect":"m10100+1",
+    "acc":-1
+  },
+  "hurricane":{
+    "type":9,
+    "power":120,
+    "acc":70,
+    "effect":"ds05030"
+  },
+  "hydro cannon":{
+    "type":2,
+    "power":150,
+    "acc":90,
+    "effect":"dw"
+  },
+  "hydro pump":{
+    "type":2,
+    "power":120,
+    "acc":80,
+    "effect":"d"
+  },
+  "hyper beam":{
+    "type":0,
+    "power":150,
+    "acc":90,
+    "effect":"dw"
+  },
+  "hyper fang":{
+    "type":0,
+    "power":80,
+    "acc":90,
+    "effect":"df10"
+  },
+  "hyper voice":{
+    "type":0,
+    "power":90,
+    "acc":100,
+    "effect":"d"
+  },
+  "hypnosis":{
+    "type":10,
+    "power":0,
+    "acc":60,
+    "effect":"s00100"
+  },
+  "ice ball":{
+    "type":5,
+    "power":30,
+    "acc":90,
+    "effect":"d"
+  },
+  "ice beam":{
+    "type":5,
+    "power":95,
+    "acc":100,
+    "effect":"ds04010"
+  },
+  "ice burn":{
+    "type":5,
+    "power":140,
+    "acc":90,
+    "effect":"ds01030"
+  },
+  "ice fang":{
+    "type":5,
+    "power":65,
+    "acc":95,
+    "effect":"ds04010f10"
+  },
+  "ice punch":{
+    "type":5,
+    "power":75,
+    "acc":100,
+    "effect":"ds04010"
+  },
+  "ice shard":{
+    "type":5,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "icicle crash":{
+    "type":5,
+    "power":85,
+    "acc":90,
+    "effect":"df30"
+  },
+  "icicle spear":{
+    "type":5,
+    "power":25,
+    "acc":100,
+    "effect":"d"
+  },
+  "icy wind":{
+    "type":5,
+    "power":55,
+    "acc":95,
+    "effect":"dm02100-1"
+  },
+  "incinerate":{
+    "type":1,
+    "power":30,
+    "acc":100,
+    "effect":"d"
+  },
+  "inferno":{
+    "type":1,
+    "power":100,
+    "acc":50,
+    "effect":"ds01100"
+  },
+  "ingrain":{
+    "type":4,
+    "power":0,
+    "acc":100,
+    "effect":"h06"
+  },
+  "iron defense":{
+    "type":16,
+    "power":0,
+    "effect":"m11100+2",
+    "acc":-1
+  },
+  "iron head":{
+    "type":16,
+    "power":80,
+    "acc":100,
+    "effect":"df30"
+  },
+  "iron tail":{
+    "type":16,
+    "power":100,
+    "acc":75,
+    "effect":"dm01010-1"
+  },
+  "judgment":{
+    "type":0,
+    "power":100,
+    "acc":100,
+    "effect":"d"
+  },
+  "jump kick":{
+    "type":6,
+    "power":100,
+    "acc":95,
+    "effect":"dr150"
+  },
+  "karate chop":{
+    "type":6,
+    "power":50,
+    "acc":100,
+    "effect":"d"
+  },
+  "knock off":{
+    "type":15,
+    "power":20,
+    "acc":100,
+    "effect":"du050"
+  },
+  "last resort":{
+    "type":0,
+    "power":140,
+    "acc":100,
+    "effect":"d"
+  },
+  "lava plume":{
+    "type":1,
+    "power":80,
+    "acc":100,
+    "effect":"ds01030"
+  },
+  "leaf blade":{
+    "type":4,
+    "power":90,
+    "acc":100,
+    "effect":"d"
+  },
+  "leaf storm":{
+    "type":4,
+    "power":140,
+    "acc":90,
+    "effect":"dm10100-2"
+  },
+  "leaf tornado":{
+    "type":4,
+    "power":65,
+    "acc":90,
+    "effect":"d"
+  },
+  "leech life":{
+    "type":11,
+    "power":20,
+    "acc":100,
+    "effect":"dh150"
+  },
+  "leech seed":{
+    "type":4,
+    "power":0,
+    "acc":90,
+    "effect":"h06"
+  },
+  "leer":{
+    "type":0,
+    "power":0,
+    "acc":100,
+    "effect":"m01100-1"
+  },
+  "lick":{
+    "type":13,
+    "power":20,
+    "acc":100,
+    "effect":"ds03030"
+  },
+  "light screen":{
+    "type":10,
+    "power":0,
+    "effect":"m11100+2",
+    "acc":-1
+  },
+  "lovely kiss":{
+    "type":0,
+    "power":0,
+    "acc":75,
+    "effect":"s00100"
+  },
+  "low kick":{
+    "type":6,
+    "acc":100,
+    "effect":"d"
+  },
+  "low sweep":{
+    "type":6,
+    "power":60,
+    "acc":100,
+    "effect":"dm02100-1"
+  },
+  "luster purge":{
+    "type":10,
+    "power":70,
+    "acc":100,
+    "effect":"dm01050-1"
+  },
+  "mach punch":{
+    "type":6,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "magical leaf":{
+    "type":4,
+    "acc":-1,
+    "power":60,
+    "effect":"d"
+  },
+  "magma storm":{
+    "type":1,
+    "power":120,
+    "acc":75,
+    "effect":"d"
+  },
+  "magnet bomb":{
+    "type":16,
+    "acc":-1,
+    "power":60,
+    "effect":"d"
+  },
+  "magnitude":{
+    "type":8,
+    "acc":100,
+    "effect":"d"
+  },
+  "meditate":{
+    "type":10,
+    "power":0,
+    "effect":"m10100+1",
+    "acc":-1
+  },
+  "mega drain":{
+    "type":4,
+    "power":40,
+    "acc":100,
+    "effect":"dh150"
+  },
+  "mega kick":{
+    "type":0,
+    "power":120,
+    "acc":75,
+    "effect":"d"
+  },
+  "mega punch":{
+    "type":0,
+    "power":80,
+    "acc":85,
+    "effect":"d"
+  },
+  "megahorn":{
+    "type":11,
+    "power":120,
+    "acc":85,
+    "effect":"d"
+  },
+  "metal burst":{
+    "type":16,
+    "acc":100,
+    "effect":"d"
+  },
+  "metal claw":{
+    "type":16,
+    "power":50,
+    "acc":95,
+    "effect":"dm10010+1"
+  },
+  "metal sound":{
+    "type":16,
+    "power":0,
+    "acc":85,
+    "effect":"m01100-2"
+  },
+  "meteor mash":{
+    "type":16,
+    "power":100,
+    "acc":85,
+    "effect":"dm10020+1"
+  },
+  "milk drink":{
+    "type":0,
+    "power":0,
+    "effect":"h050",
+    "acc":-1
+  },
+  "mirror shot":{
+    "type":16,
+    "power":65,
+    "acc":85,
+    "effect":"d"
+  },
+  "mist ball":{
+    "type":10,
+    "power":70,
+    "acc":100,
+    "effect":"dm00050-1"
+  },
+  "moonlight":{
+    "type":0,
+    "power":0,
+    "effect":"h050",
+    "acc":-1
+  },
+  "morning sun":{
+    "type":0,
+    "power":0,
+    "effect":"h050",
+    "acc":-1
+  },
+  "mud bomb":{
+    "type":8,
+    "power":65,
+    "acc":85,
+    "effect":"d"
+  },
+  "mud shot":{
+    "type":8,
+    "power":55,
+    "acc":95,
+    "effect":"dm02100-1"
+  },
+  "mud-slap":{
+    "type":8,
+    "power":20,
+    "acc":100,
+    "effect":"d"
+  },
+  "muddy water":{
+    "type":2,
+    "power":95,
+    "acc":85,
+    "effect":"d"
+  },
+  "nasty plot":{
+    "type":15,
+    "power":0,
+    "effect":"m10100+2",
+    "acc":-1
+  },
+  "natural gift":{
+    "type":0,
+    "acc":100,
+    "effect":"d"
+  },
+  "nature power":{
+    "type":0,
+    "power":0,
+    "acc":95,
+    "effect":"d"
+  },
+  "needle arm":{
+    "type":4,
+    "power":60,
+    "acc":100,
+    "effect":"df30"
+  },
+  "night daze":{
+    "type":15,
+    "power":85,
+    "acc":95,
+    "effect":"d"
+  },
+  "night shade":{
+    "type":13,
+    "acc":100,
+    "effect":"d"
+  },
+  "night slash":{
+    "type":15,
+    "power":70,
+    "acc":100,
+    "effect":"d"
+  },
+  "octazooka":{
+    "type":2,
+    "power":65,
+    "acc":85,
+    "effect":"d"
+  },
+  "ominous wind":{
+    "type":13,
+    "power":60,
+    "acc":100,
+    "effect":"d"
+  },
+  "outrage":{
+    "type":14,
+    "power":120,
+    "acc":100,
+    "effect":"ds15100"
+  },
+  "overheat":{
+    "type":1,
+    "power":140,
+    "acc":90,
+    "effect":"dm10100-2"
+  },
+  "pay day":{
+    "type":0,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "payback":{
+    "type":15,
+    "power":50,
+    "acc":100,
+    "effect":"d"
+  },
+  "peck":{
+    "type":9,
+    "power":35,
+    "acc":100,
+    "effect":"d"
+  },
+  "petal dance":{
+    "type":4,
+    "power":120,
+    "acc":100,
+    "effect":"ds05100"
+  },
+  "pin missile":{
+    "type":11,
+    "power":14,
+    "acc":85,
+    "effect":"d"
+  },
+  "pluck":{
+    "type":9,
+    "power":60,
+    "acc":100,
+    "effect":"d"
+  },
+  "poison fang":{
+    "type":7,
+    "power":50,
+    "acc":100,
+    "effect":"ds02020"
+  },
+  "poison gas":{
+    "type":7,
+    "power":0,
+    "acc":80,
+    "effect":"s02100"
+  },
+  "poison jab":{
+    "type":7,
+    "power":80,
+    "acc":100,
+    "effect":"ds02030"
+  },
+  "poison sting":{
+    "type":7,
+    "power":15,
+    "acc":100,
+    "effect":"ds02030"
+  },
+  "poison tail":{
+    "type":7,
+    "power":50,
+    "acc":100,
+    "effect":"ds02010"
+  },
+  "poisonpowder":{
+    "type":7,
+    "power":0,
+    "acc":75,
+    "effect":"s02100"
+  },
+  "pound":{
+    "type":0,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "powder snow":{
+    "type":5,
+    "power":40,
+    "acc":100,
+    "effect":"ds04010"
+  },
+  "power gem":{
+    "type":12,
+    "power":70,
+    "acc":100,
+    "effect":"d"
+  },
+  "power whip":{
+    "type":4,
+    "power":120,
+    "acc":85,
+    "effect":"d"
+  },
+  "present":{
+    "type":0,
+    "acc":90,
+    "effect":"d"
+  },
+  "psybeam":{
+    "type":10,
+    "power":65,
+    "acc":100,
+    "effect":"ds05010"
+  },
+  "psychic":{
+    "type":10,
+    "power":90,
+    "acc":100,
+    "effect":"dm01010-1"
+  },
+  "psycho boost":{
+    "type":10,
+    "power":140,
+    "acc":90,
+    "effect":"dm10100-2"
+  },
+  "psycho cut":{
+    "type":10,
+    "power":70,
+    "acc":100,
+    "effect":"d"
+  },
+  "psyshock":{
+    "type":10,
+    "power":80,
+    "acc":100,
+    "effect":"d"
+  },
+  "psystrike":{
+    "type":10,
+    "power":100,
+    "acc":100,
+    "effect":"d"
+  },
+  "psywave":{
+    "type":10,
+    "acc":80,
+    "effect":"d"
+  },
+  "punishment":{
+    "type":15,
+    "acc":100,
+    "effect":"d"
+  },
+  "pursuit":{
+    "type":15,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "quick attack":{
+    "type":0,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "quiver dance":{
+    "type":11,
+    "power":0,
+    "effect":"m10100+1m11100+1m12100+1",
+    "acc":-1
+  },
+  "rage":{
+    "type":0,
+    "power":20,
+    "acc":100,
+    "effect":"d"
+  },
+  "rapid spin":{
+    "type":0,
+    "power":20,
+    "acc":100,
+    "effect":"d"
+  },
+  "razor leaf":{
+    "type":4,
+    "power":55,
+    "acc":95,
+    "effect":"d"
+  },
+  "razor shell":{
+    "type":2,
+    "power":75,
+    "acc":95,
+    "effect":"dm01050-1"
+  },
+  "razor wind":{
+    "type":0,
+    "power":80,
+    "acc":100,
+    "effect":"d"
+  },
+  "recover":{
+    "type":0,
+    "power":0,
+    "effect":"h050",
+    "acc":-1
+  },
+  "reflect":{
+    "type":10,
+    "power":0,
+    "effect":"m11100+2",
+    "acc":-1
+  },
+  "refresh":{
+    "type":0,
+    "power":0,
+    "acc":100,
+    "effect":"c100"
+  },
+  "relic song":{
+    "type":0,
+    "power":75,
+    "acc":100,
+    "effect":"ds00010"
+  },
+  "rest":{
+    "type":10,
+    "power":0,
+    "effect":"h0100c100s10100",
+    "acc":-1
+  },
+  "retaliate":{
+    "type":0,
+    "power":70,
+    "acc":100,
+    "effect":"d"
+  },
+  "return":{
+    "type":0,
+    "acc":100,
+    "effect":"d"
+  },
+  "revenge":{
+    "type":6,
+    "power":60,
+    "acc":100,
+    "effect":"d"
+  },
+  "reversal":{
+    "type":6,
+    "acc":100,
+    "effect":"d"
+  },
+  "roar of time":{
+    "type":14,
+    "power":150,
+    "acc":90,
+    "effect":"rw"
+  },
+  "rock blast":{
+    "type":12,
+    "power":25,
+    "acc":90,
+    "effect":"d"
+  },
+  "rock climb":{
+    "type":0,
+    "power":90,
+    "acc":85,
+    "effect":"ds05020"
+  },
+  "rock polish":{
+    "type":12,
+    "power":0,
+    "effect":"m12100+2",
+    "acc":-1
+  },
+  "rock slide":{
+    "type":12,
+    "power":75,
+    "acc":90,
+    "effect":"df30"
+  },
+  "rock smash":{
+    "type":6,
+    "power":40,
+    "acc":100,
+    "effect":"dm01050-1"
+  },
+  "rock throw":{
+    "type":12,
+    "power":50,
+    "acc":90,
+    "effect":"d"
+  },
+  "rock tomb":{
+    "type":12,
+    "power":50,
+    "acc":80,
+    "effect":"df10"
+  },
+  "rock wrecker":{
+    "type":12,
+    "power":150,
+    "acc":90,
+    "effect":"dw"
+  },
+  "rolling kick":{
+    "type":6,
+    "power":60,
+    "acc":85,
+    "effect":"df30"
+  },
+  "rollout":{
+    "type":12,
+    "power":30,
+    "acc":90,
+    "effect":"d"
+  },
+  "roost":{
+    "type":9,
+    "power":0,
+    "effect":"h050",
+    "acc":-1
+  },
+  "round":{
+    "type":0,
+    "power":60,
+    "acc":100,
+    "effect":"d"
+  },
+  "sacred fire":{
+    "type":1,
+    "power":100,
+    "acc":95,
+    "effect":"ds01050"
+  },
+  "sacred sword":{
+    "type":6,
+    "power":90,
+    "acc":100,
+    "effect":"d"
+  },
+  "safeguard":{
+    "type":0,
+    "power":0,
+    "effect":"c100",
+    "acc":-1
+  },
+  "sand tomb":{
+    "type":8,
+    "power":35,
+    "acc":85,
+    "effect":"d"
+  },
+  "scald":{
+    "type":2,
+    "power":80,
+    "acc":100,
+    "effect":"ds01030"
+  },
+  "scary face":{
+    "type":0,
+    "power":0,
+    "acc":100,
+    "effect":"m02100-2"
+  },
+  "scratch":{
+    "type":0,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "screech":{
+    "type":0,
+    "power":0,
+    "acc":85,
+    "effect":"m01100-2"
+  },
+  "searing shot":{
+    "type":1,
+    "power":100,
+    "acc":100,
+    "effect":"ds01030"
+  },
+  "secret power":{
+    "type":0,
+    "power":70,
+    "acc":100,
+    "effect":"ds03030"
+  },
+  "secret sword":{
+    "type":6,
+    "power":85,
+    "acc":100,
+    "effect":"d"
+  },
+  "seed bomb":{
+    "type":4,
+    "power":80,
+    "acc":100,
+    "effect":"d"
+  },
+  "seed flare":{
+    "type":4,
+    "power":120,
+    "acc":85,
+    "effect":"dm01040-2"
+  },
+  "seismic toss":{
+    "type":6,
+    "acc":100,
+    "effect":"d"
+  },
+  "selfdestruct":{
+    "type":0,
+    "power":200,
+    "acc":100,
+    "effect":"dr1100"
+  },
+  "shadow ball":{
+    "type":13,
+    "power":80,
+    "acc":100,
+    "effect":"dm01020-1"
+  },
+  "shadow claw":{
+    "type":13,
+    "power":70,
+    "acc":100,
+    "effect":"d"
+  },
+  "shadow force":{
+    "type":13,
+    "power":120,
+    "acc":100,
+    "effect":"d"
+  },
+  "shadow punch":{
+    "type":13,
+    "acc":-1,
+    "power":60,
+    "effect":"d"
+  },
+  "shadow sneak":{
+    "type":13,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "sharpen":{
+    "type":0,
+    "acc":-1,
+    "power":0,
+    "effect":"m10100+1"
+  },
+  "sheer cold":{
+    "type":5,
+    "acc":30,
+    "power":-1,
+    "effect":"d"
+  },
+  "shell smash":{
+    "type":0,
+    "acc":-1,
+    "power":0,
+    "effect":"m11100-1m10100+2m12100+2"
+  },
+  "shift gear":{
+    "type":16,
+    "power":0,
+    "effect":"m12100+2m10100+1",
+    "acc":-1
+  },
+  "shock wave":{
+    "type":3,
+    "acc":-1,
+    "power":60,
+    "effect":"d"
+  },
+  "signal beam":{
+    "type":11,
+    "power":75,
+    "acc":100,
+    "effect":"ds05010"
+  },
+  "silver wind":{
+    "type":11,
+    "power":60,
+    "acc":100,
+    "effect":"d"
+  },
+  "sing":{
+    "type":0,
+    "power":0,
+    "acc":55,
+    "effect":"s00100"
+  },
+  "skull bash":{
+    "type":0,
+    "power":100,
+    "acc":100,
+    "effect":"d"
+  },
+  "sky attack":{
+    "type":9,
+    "power":140,
+    "acc":90,
+    "effect":"d"
+  },
+  "sky drop":{
+    "type":9,
+    "power":60,
+    "acc":100,
+    "effect":"d"
+  },
+  "sky uppercut":{
+    "type":6,
+    "power":85,
+    "acc":90,
+    "effect":"d"
+  },
+  "slam":{
+    "type":0,
+    "power":80,
+    "acc":75,
+    "effect":"d"
+  },
+  "slash":{
+    "type":0,
+    "power":70,
+    "acc":100,
+    "effect":"d"
+  },
+  "sleep powder":{
+    "type":4,
+    "power":0,
+    "acc":75,
+    "effect":"s00100"
+  },
+  "sludge":{
+    "type":7,
+    "power":65,
+    "acc":100,
+    "effect":"ds02030"
+  },
+  "sludge bomb":{
+    "type":7,
+    "power":90,
+    "acc":100,
+    "effect":"ds02030"
+  },
+  "sludge wave":{
+    "type":7,
+    "power":95,
+    "acc":100,
+    "effect":"ds02010"
+  },
+  "smack down":{
+    "type":12,
+    "power":50,
+    "acc":100,
+    "effect":"d"
+  },
+  "smellingsalt":{
+    "type":0,
+    "power":60,
+    "acc":100,
+    "effect":"d"
+  },
+  "smog":{
+    "type":7,
+    "power":20,
+    "acc":70,
+    "effect":"ds02040"
+  },
+  "snarl":{
+    "type":15,
+    "power":55,
+    "acc":95,
+    "effect":"dm00100-1"
+  },
+  "snore":{
+    "type":0,
+    "power":40,
+    "acc":100,
+    "effect":"df30"
+  },
+  "solarbeam":{
+    "type":4,
+    "power":120,
+    "acc":100,
+    "effect":"d"
+  },
+  "sonicboom":{
+    "type":0,
+    "acc":90,
+    "effect":"d20"
+  },
+  "spacial rend":{
+    "type":14,
+    "power":100,
+    "acc":95,
+    "effect":"d"
+  },
+  "spark":{
+    "type":3,
+    "power":65,
+    "acc":100,
+    "effect":"ds03030"
+  },
+  "spike cannon":{
+    "type":0,
+    "power":20,
+    "acc":100,
+    "effect":"d"
+  },
+  "spit up":{
+    "type":0,
+    "acc":100,
+    "effect":"d"
+  },
+  "splash":{
+    "type":0,
+    "acc":0,
+    "power":0,
+    "effect":"0"
+  },
+  "spore":{
+    "type":4,
+    "power":0,
+    "acc":100,
+    "effect":"s00100"
+  },
+  "steamroller":{
+    "type":11,
+    "power":65,
+    "acc":100,
+    "effect":"df30"
+  },
+  "steel wing":{
+    "type":16,
+    "power":70,
+    "acc":90,
+    "effect":"dm11010+1"
+  },
+  "stomp":{
+    "type":0,
+    "power":65,
+    "acc":100,
+    "effect":"df30"
+  },
+  "stone edge":{
+    "type":12,
+    "power":100,
+    "acc":80,
+    "effect":"d"
+  },
+  "stored power":{
+    "type":10,
+    "power":20,
+    "acc":100,
+    "effect":"d"
+  },
+  "storm throw":{
+    "type":6,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "strength":{
+    "type":0,
+    "power":80,
+    "acc":100,
+    "effect":"d"
+  },
+  "string shot":{
+    "type":11,
+    "power":0,
+    "acc":95,
+    "effect":"m02100-1"
+  },
+  "struggle":{
+    "type":0,
+    "power":50,
+    "acc":100,
+    "effect":"d"
+  },
+  "struggle bug":{
+    "type":11,
+    "power":30,
+    "acc":100,
+    "effect":"dm00100-1"
+  },
+  "stun spore":{
+    "type":4,
+    "power":0,
+    "acc":75,
+    "effect":"s03100"
+  },
+  "submission":{
+    "type":6,
+    "power":80,
+    "acc":80,
+    "effect":"dr0025"
+  },
+  "sucker punch":{
+    "type":15,
+    "power":80,
+    "acc":100,
+    "effect":"d"
+  },
+  "super fang":{
+    "type":0,
+    "acc":90,
+    "effect":"d"
+  },
+  "superpower":{
+    "type":6,
+    "power":120,
+    "acc":100,
+    "effect":"dm10100-1m11100-1"
+  },
+  "supersonic":{
+    "type":0,
+    "power":0,
+    "acc":55,
+    "effect":"s05100"
+  },
+  "surf":{
+    "type":2,
+    "power":95,
+    "acc":100,
+    "effect":"d"
+  },
+  "swagger":{
+    "type":0,
+    "power":0,
+    "acc":90,
+    "effect":"s05100m00100+2"
+  },
+  "sweet kiss":{
+    "type":0,
+    "power":0,
+    "acc":75,
+    "effect":"s00100"
+  },
+  "swift":{
+    "type":0,
+    "acc":-1,
+    "power":60,
+    "effect":"d"
+  },
+  "swords dance":{
+    "type":0,
+    "power":0,
+    "effect":"m10100+2",    "acc":-1
+  },
+  "synchronoise":{
+    "type":10,
+    "power":70,
+    "acc":100,
+    "effect":"d"
+  },
+  "tackle":{
+    "type":0,
+    "power":50,
+    "acc":100,
+    "effect":"d"
+  },
+  "tail glow":{
+    "type":11,
+    "power":0,
+    "acc":100,
+    "effect":"m00100+2"
+  },
+  "tail slap":{
+    "type":0,
+    "power":25,
+    "acc":85,
+    "effect":"d"
+  },
+  "tail whip":{
+    "type":0,
+    "power":0,
+    "acc":100,
+    "effect":"m01100-1"
+  },
+  "tailwind":{
+    "type":9,
+    "power":0,
+    "effect":"m12100+2",    "acc":-1
+
+  },
+  "take down":{
+    "type":0,
+    "power":90,
+    "acc":85,
+    "effect":"dr0025"
+  },
+  "techno blast":{
+    "type":0,
+    "power":85,
+    "acc":100,
+    "effect":"d"
+  },
+  "teeter dance":{
+    "type":0,
+    "power":0,
+    "acc":100,
+    "effect":"s05100"
+  },
+  "thief":{
+    "type":15,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "thrash":{
+    "type":0,
+    "power":120,
+    "acc":100,
+    "effect":"d"
+  },
+  "thunder":{
+    "type":3,
+    "power":120,
+    "acc":70,
+    "effect":"ds03030"
+  },
+  "thunder fang":{
+    "type":3,
+    "power":65,
+    "acc":95,
+    "effect":"ds03010"
+  },
+  "thunder wave":{
+    "type":3,
+    "power":0,
+    "acc":100,
+    "effect":"s03100"
+  },
+  "thunderbolt":{
+    "type":3,
+    "power":95,
+    "acc":100,
+    "effect":"ds03010"
+  },
+  "thunderpunch":{
+    "type":3,
+    "power":75,
+    "acc":100,
+    "effect":"ds03010"
+  },
+  "thundershock":{
+    "type":3,
+    "power":40,
+    "acc":100,
+    "effect":"ds03010"
+  },
+  "tickle":{
+    "type":0,
+    "power":0,
+    "acc":100,
+    "effect":"m00100-1m01100-1"
+  },
+  "toxic":{
+    "type":7,
+    "power":0,
+    "acc":90,
+    "effect":"s02100"
+  },
+  "tri attack":{
+    "type":0,
+    "power":80,
+    "acc":100,
+    "effect":"ds01006s03006s04006"
+  },
+  "triple kick":{
+    "type":6,
+    "power":10,
+    "acc":90,
+    "effect":"d"
+  },
+  "trump card":{
+    "type":0,
+    "effect":"d",
+    "acc":100
+  },
+  "twineedle":{
+    "type":11,
+    "power":25,
+    "acc":100,
+    "effect":"ds02020"
+  },
+  "twister":{
+    "type":14,
+    "power":40,
+    "acc":100,
+    "effect":"df20"
+  },
+  "u-turn":{
+    "type":11,
+    "power":70,
+    "acc":100,
+    "effect":"d"
+  },
+  "uproar":{
+    "type":0,
+    "power":90,
+    "acc":100,
+    "effect":"d"
+  },
+  "v-create":{
+    "type":1,
+    "power":180,
+    "acc":95,
+    "effect":"dm11100-1m12100-1"
+  },
+  "vacuum wave":{
+    "type":6,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "venoshock":{
+    "type":7,
+    "power":65,
+    "acc":100,
+    "effect":"d"
+  },
+  "vicegrip":{
+    "type":0,
+    "power":55,
+    "acc":100,
+    "effect":"d"
+  },
+  "vine whip":{
+    "type":4,
+    "power":35,
+    "acc":100,
+    "effect":"d"
+  },
+  "vital throw":{
+    "type":6,
+    "power":70,
+    "acc":-1,
+    "effect":"d"
+  },
+  "volt switch":{
+    "type":3,
+    "power":70,
+    "acc":100,
+    "effect":"d"
+  },
+  "volt tackle":{
+    "type":3,
+    "power":120,
+    "acc":100,
+    "effect":"ds03010r0033"
+  },
+  "wake-up slap":{
+    "type":6,
+    "power":60,
+    "acc":100,
+    "effect":"d"
+  },
+  "water gun":{
+    "type":2,
+    "power":40,
+    "acc":100,
+    "effect":"d"
+  },
+  "water pledge":{
+    "type":2,
+    "power":50,
+    "acc":100,
+    "effect":"d"
+  },
+  "water pulse":{
+    "type":2,
+    "power":60,
+    "acc":100,
+    "effect":"ds05020"
+  },
+  "water spout":{
+    "type":2,
+    "acc":100,
+    "effect":"d"
+  },
+  "waterfall":{
+    "type":2,
+    "power":80,
+    "acc":100,
+    "effect":"df20"
+  },
+  "weather ball":{
+    "type":0,
+    "power":50,
+    "acc":100,
+    "effect":"d"
+  },
+  "whirlpool":{
+    "type":2,
+    "power":35,
+    "acc":85,
+    "effect":"d"
+  },
+  "wild charge":{
+    "type":3,
+    "power":90,
+    "acc":100,
+    "effect":"dr0025"
+  },
+  "will-o-wisp":{
+    "type":1,
+    "power":0,
+    "acc":75,
+    "effect":"s01100"
+  },
+  "wing attack":{
+    "type":9,
+    "power":60,
+    "acc":100,
+    "effect":"d"
+  },
+  "withdraw":{
+    "type":2,
+    "power":0,
+    "effect":"m11100+1",
+    "acc":-1
+  },
+  "wood hammer":{
+    "type":4,
+    "power":120,
+    "acc":100,
+    "effect":"dr0033"
+  },
+  "work up":{
+    "type":0,
+    "power":0,
+    "effect":"m10100+1"
+  },
+  "wrap":{
+    "type":0,
+    "power":15,
+    "acc":90,
+    "effect":"d"
+  },
+  "wring out":{
+    "type":0,
+    "acc":100,
+    "effect":"d"
+  },
+  "x-scissor":{
+    "type":11,
+    "power":80,
+    "acc":100,
+    "effect":"d"
+  },
+  "zap cannon":{
+    "type":3,
+    "power":120,
+    "acc":50,
+    "effect":"ds03100"
+  },
+  "zen headbutt":{
+    "type":10,
+    "power":80,
+    "acc":90,
+    "effect":"df10"
+  }
+}
