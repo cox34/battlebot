@@ -1,7 +1,7 @@
 {
 		"en":
 		 {
-			"types": 							["Normal","Fire","Water","Electric","Grass","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel"],
+			"types": ["Normal","Fire","Water","Electric","Grass","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel"],
 			
 			"cmdDeny":						"You are not a part of this battle.",
 			"battleChallenge":		"_PLAYER0_ challenges someone to battle! \n(!battle, !go <name>, !use <attack>)",
@@ -12,7 +12,7 @@
 			"useNotYourTurn":			"It's not your turn.",
 			"endGame":						"Battle ended by _PLAYER0_.",
 			
-			"recordStats":				"_PLAYER0 has fought _NUM0_ battles and won _NUM1_ battles.",
+			"recordStats":				"_PLAYER0_ has fought _NUM0_ battles and won _NUM1_ battles.",
 			"recordNone":					"That user has not fought any battles.",
 			"recordTotal":				"_NUM0_ battles have been fought.",
 			
@@ -57,6 +57,6 @@
 		 
 		"lang2":
 			{
-			
+
 			}
 }
