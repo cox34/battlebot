@@ -25,8 +25,8 @@ Install [discord.js](https://github.com/hydrabolt/discord.js) \([help](https://d
 ## Admin Commands
 - `!>plus ### @name_of_user` - give currency.
 - `!>minus ### @name_of_user` - take currency. 
-- `!>give @name_of_user "mon_name_in_quotes";atk[,max_range];def[,max_range];spe[,max_range];spc[,max_range];hp[,max_range];\[type1,type2]` - create mon.
-- example: `!>give @me "good mon";300;300;300;300;500;13,15`
+- `!>give @name_of_user "mon_name_in_quotes";atk[,max_range];def[,max_range];spe[,max_range];spc[,max_range];hp[,max_range];[type1,type2]` - create mon.
+-      example: `!>give @me "good mon";300;300;300;300;500;13,15`
 - `!>modify @name_of_user "mon_name_in_quotes";key;value` - modify mon.
 - `!>clone @name_of_mon_owner "mon_name_in_quotes" @name_of_receiving_user` - copy mon.
 - `!>release @name_of_mon_owner "mon_name_in_quotes"` - delete mon.
