@@ -4,7 +4,7 @@ Battlebot - Battles with Discord
 
 Install [node.js](https://nodejs.org/en/)
 
-Install [discord.js](https://github.com/hydrabolt/discord.js) \([help](https://discordjs.readthedocs.io/en/latest/installing.html)\)
+Install [discord.js](https://github.com/hydrabolt/discord.js) \(read the [documentation](https://discord.js.org/#/docs/main/stable/general/welcome)\)
 	 
 ## Basic Commands
 - `!battle` - start or accept a battle.
@@ -31,22 +31,39 @@ Install [discord.js](https://github.com/hydrabolt/discord.js) \([help](https://d
 - `!>clone @name_of_mon_owner "mon_name_in_quotes" @name_of_receiving_user` - copy mon.
 - `!>release @name_of_mon_owner "mon_name_in_quotes"` - delete mon.
 - `!>savelog` - save log.
+- `!>cheat;###`
 
 Types
 0: Normal,
+
 1: Fire,
+
 2: Water,
+
 3: Electric,
+
 4: Grass,
+
 5: Ice,
+
 6: Fighting,
+
 7: Poison,
+
 8: Ground,
+
 9: Flying,
+
 10: Psychic,
+
 11: Bug,
+
 12: Rock,
+
 13: Ghost,
+
 14: Dragon,
+
 15: Dark,
+
 16: Steel
