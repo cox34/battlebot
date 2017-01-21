@@ -3,7 +3,12 @@ var Config = require("./config.json");
 var Trans = require("./translation.json");
 var Moves = require("./moves.json");
 var fs = require('fs');
-var bot = new Discord.Client();
+var bot = new Discord.Client({
+	disableEveryone: true, 
+  max_message_cache: 50,
+  message_cache_lifetime: 120,
+  message_sweep_interval: 60}
+	);
 
 var Log;
 fs.access("./log.json", fs.F_OK, 
@@ -48,8 +53,9 @@ var cheatDmg;
 var cheatEff;
 
 bot.on("ready", () => {
-	console.log("Started successfully. Serving in " + bot.servers.length + " servers");
-	console.log("Using " + Config.lang + " translation");
+	//bot.generateInvite(['SEND_MESSAGES', 'READ_MESSAGES']).then(link => {console.log(`Generated bot invite link: ${link}`);});
+	//console.log("Using " + Config.lang + " translation");
+	console.log('ready');
 });
 
 bot.on("message", msg => {
@@ -59,7 +65,7 @@ bot.on("message", msg => {
 		var suffix = msg.content.substring(command.length + 2);
 		var cmd = commands[command];
 		if (command.charAt(0) === ">" && msg.author.id !== Config.adminId){
-			bot.sendMessage(msg.channel.id, "\'no\'"); 
+			msg.channel.sendMessage("\'no\'"); 
 			return null;
 		}
 		if (cmd) {
@@ -73,24 +79,26 @@ bot.on("message", msg => {
 				if((command === "go" || command === "use") && command !== "battle"){
 					if (msg.author.username === games[msg.channel.id].players[0].name) {
 						games[msg.channel.id].origin = 0;
+						suffix = msg.cleanContent.substring(command.length + 2);
 					}
 					else if (games[msg.channel.id].players[1] && msg.author.username === games[msg.channel.id].players[1].name) {
 						games[msg.channel.id].origin = 1;
+						suffix = msg.cleanContent.substring(command.length + 2);
 					}
 					else {
-						bot.sendMessage(msg.channel.id, Trans[Config.lang].cmdDeny); 
+						msg.channel.sendMessage(Trans[Config.lang].cmdDeny); 
 						return;
 					}
 				}
 			}
-			cmd.process(bot, msg, suffix);
+			cmd.process(msg, suffix);
 		}
 	}
 });
 
 var commands = {	
 	"battle": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			if(!games[msg.channel.id]){
 				games[msg.channel.id] = new game.createInstance();
 			}
@@ -102,21 +110,21 @@ var commands = {
 			if(l === 0){
 				games[msg.channel.id].players.push({"name": msg.author.username, "id": msg.author.id});
 				if(games[msg.channel.id].auto === false){
-					bot.sendMessage(msg.channel.id, Trans[Config.lang].battleChallenge.replace(/_PLAYER0_/, msg.author.username));
+					msg.channel.sendMessage(Trans[Config.lang].battleChallenge.replace(/_PLAYER0_/, msg.author.username)).then(rmsg => rmsg.delete(30000));
 				}
 				else{
-					bot.sendMessage(msg.channel.id, Trans[Config.lang].battleAuto.replace(/_PLAYER0_/, msg.author.username));
+					msg.channel.sendMessage(Trans[Config.lang].battleAuto.replace(/_PLAYER0_/, msg.author.username));
 				}
 				console.log(msg.author.username + " started a battle.");
 				logs.add(games[msg.channel.id].players[0]);
 			}
 			else if(l === 1 && games[msg.channel.id].players[0].name !== msg.author.username){
 				games[msg.channel.id].players.push({"name": msg.author.username, "id": msg.author.id});
-				bot.sendMessage(msg.channel.id, Trans[Config.lang].battleAccept.replace(/_PLAYER0_/, msg.author.username));
+				msg.channel.sendMessage(Trans[Config.lang].battleAccept.replace(/_PLAYER0_/, msg.author.username)).then(rmsg => rmsg.delete(30000));
 				logs.add(games[msg.channel.id].players[1]);
 			}
 			else if(l === 2){
-				bot.sendMessage(msg.channel.id, Trans[Config.lang].battleExists.replace(/_PLAYER0_/, games[msg.channel.id].players[0].name).replace(/_PLAYER1_/, games[msg.channel.id].players[1].name));
+				msg.channel.sendMessage(Trans[Config.lang].battleExists.replace(/_PLAYER0_/, games[msg.channel.id].players[0].name).replace(/_PLAYER1_/, games[msg.channel.id].players[1].name)).then(rmsg => rmsg.delete(30000));
 			}
 			
 			/*single
@@ -130,14 +138,14 @@ var commands = {
 					",\n**SPC**: " + games[msg.channel.id].players[1].mon.spc + 
 					",\n**HP**: " + games[msg.channel.id].players[1].mon.hp +
 					",\n**Type**: " + game.displayType(games[msg.channel.id].players[1].mon.type);
-				bot.sendMessage(msg.channel.id, send);
+				bot.sendMessage(send);
 			}
 			//single*/
 			
 		}
 	},
 	"go": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			if(!games[msg.channel.id].players[games[msg.channel.id].origin].mon){
 				var custom = false;
 				var playerMons = Log[msg.author.id].mons;
@@ -165,7 +173,7 @@ var commands = {
 					games[msg.channel.id].turn = (games[msg.channel.id].players[0].mon.spe >= games[msg.channel.id].players[1].mon.spe ? 0 : 1);
 					send += "\n" + Trans[Config.lang].goIsFirst.replace(/_MON0_/, games[msg.channel.id].players[games[msg.channel.id].turn].mon.nick);
 				}
-				bot.sendMessage(msg.channel.id, send);
+				msg.channel.sendMessage(send).then(rmsg => rmsg.delete(30000));
 				
 				/*single
 				if(games[msg.channel.id].auto === true && games[msg.channel.id].turn === 1){
@@ -181,7 +189,7 @@ var commands = {
 						games[msg.channel.id].players[1].mon, 
 						games[msg.channel.id].players[0].mon
 					);	
-					bot.sendMessage(msg.channel.id, games[msg.channel.id].queue);
+					bot.sendMessage(games[msg.channel.id].queue);
 					games[msg.channel.id].queue = "";
 					if (games[msg.channel.id].ended === true) {
 						game.endGame(msg.channel.id);
@@ -193,12 +201,12 @@ var commands = {
 		}
 	},
 	"use": {
-		process: function(bot, msg, suffix){
+		process: function(msg, suffix){
 			if(games[msg.channel.id].turn === games[msg.channel.id].origin) {
 				if(games[msg.channel.id].endTimer !== null){
 					clearTimeout(games[msg.channel.id].endTimer);
 					games[msg.channel.id].endTimer = null;
-					bot.sendMessage(msg.channel.id, Trans[Config.lang].timerInterrupt);
+					msg.channel.sendMessage(Trans[Config.lang].timerInterrupt).then(rmsg => rmsg.delete(30000));
 				}
 				game.doAttack(
 					games[msg.channel.id].players[games[msg.channel.id].origin].mon, 
@@ -211,7 +219,7 @@ var commands = {
 					games[msg.channel.id].players[games[msg.channel.id].origin].mon, 
 					games[msg.channel.id].players[games[msg.channel.id].origin === 0 ? 1 : 0].mon
 				);	
-				bot.sendMessage(msg.channel.id, games[msg.channel.id].queue);
+				msg.channel.sendMessage(games[msg.channel.id].queue).then(rmsg => rmsg.delete(30000));
 				games[msg.channel.id].queue = "";
 				if (games[msg.channel.id].ended === true) {
 					game.endGame(msg.channel.id);
@@ -219,53 +227,53 @@ var commands = {
 				}			
 			}
 			else {
-				bot.sendMessage(msg.channel.id, Trans[Config.lang].useNotYourTurn);
+				msg.channel.sendMessage(Trans[Config.lang].useNotYourTurn).then(rmsg => rmsg.delete(30000));
 			}
 		}
 	}, 
 	"help": {
-		process: function(bot, msg, suffix) {
-			bot.sendMessage(
+		process: function(msg, suffix) {
+			msg.channel.sendMessage(
 			  msg.channel.id, 
 			  "`!battle, !go <name>, !use <attack>, !endbattle, !bs <\@username>, !bsall\n -- https://github.com/cox34/battlebot`"
-			);
+			).then(rmsg => rmsg.delete(30000));
 		}
 	},
 	"endbattle": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			if(games[msg.channel.id].endTimer === null){
 				games[msg.channel.id].endTimer = setTimeout(function(){
 						game.endGame([msg.channel.id]);
-						bot.sendMessage(msg.channel.id, Trans[Config.lang].timerEnd);
+						msg.channel.sendMessage(Trans[Config.lang].timerEnd).then(rmsg => rmsg.delete(30000));
 					}, 15000);
-				bot.sendMessage(msg.channel.id, Trans[Config.lang].timerStart);
+				msg.channel.sendMessage(Trans[Config.lang].timerStart).then(rmsg => rmsg.delete(30000));
 			}
 			else{
-				bot.sendMessage(msg.channel.id, Trans[Config.lang].timerInProgress);
+				msg.channel.sendMessage(Trans[Config.lang].timerInProgress).then(rmsg => rmsg.delete(30000));
 			}
 		}
 	},
 	"bs": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			if(suffix){
 				if(msg.mentions[0] === undefined){
-					bot.sendMessage(msg.channel.id, "Invalid parameter");
+					msg.channel.sendMessage("Invalid parameter").then(rmsg => rmsg.delete(30000));
 					return null;
 				}
 				logs.add(msg.mentions[0]);
 				var id = suffix.substring(2,20);
 				damage.power();
-				bot.sendMessage(msg.channel.id, Log[id].name + ": " + Log[id].money + " " + Config.moneyName + ", " + Log[id].win + "W\/" + Log[id].lose +"L");	
+				msg.channel.sendMessage(Log[id].name + ": " + Log[id].money + " " + Config.moneyName + ", " + Log[id].win + "W\/" + Log[id].lose +"L").then(rmsg => rmsg.delete(30000));	
 			}
 			else{
 				logs.add(msg.author);
 				id = msg.author.id;
-				bot.sendMessage(msg.channel.id, Log[id].name + ": " + Log[id].money + " " + Config.moneyName + ", " + Log[id].win + "W\/" + Log[id].lose +"L\n\n");
+				msg.channel.sendMessage(Log[id].name + ": " + Log[id].money + " " + Config.moneyName + ", " + Log[id].win + "W\/" + Log[id].lose +"L\n\n").then(rmsg => rmsg.delete(30000));
 			}
 		}
 	},
 	"bsall": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			var table = "```Name____________"+Config.moneyName+"_W\/L\n";
 			var keys = []; 
 			for(var key in Log) {keys.push(key);}
@@ -275,11 +283,11 @@ var commands = {
 				table += Log[sorted[i]].name + logs.padTable(16-Log[sorted[i]].name.length, "_") + Log[sorted[i]].money + logs.padTable(8-Log[sorted[i]].money.toString().length, "_") + Log[sorted[i]].win + "\/" + Log[sorted[i]].lose + "\n" ;
 			}
 			table += "```";
-			bot.sendMessage(msg.channel.id, table);
+			msg.channel.sendMessage(table).then(rmsg => rmsg.delete(60000));
 		}
 	},
 	"mons": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			logs.add(msg.author);
 			var playerMons = Log[msg.author.id].mons;
 			var table = "```";
@@ -298,16 +306,16 @@ var commands = {
 				table += "\n";
 			}
 			table += "```";
-			bot.sendMessage(msg.channel.id, table);
+			msg.channel.sendMessage(table).then(rmsg => rmsg.delete(60000));
 		}
 	},
 	">savelog": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			logs.save();
 		}
 	},
 	">plus": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			suffix = suffix.split(" ");
 			var num = parseInt(suffix[0]);
 			var id = suffix[1].substring(2,20);
@@ -315,7 +323,7 @@ var commands = {
 		}
 	},
 	">minus": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			suffix = suffix.split(" ");
 			var num = parseInt(suffix[0]);
 			var id = suffix[1].substring(2,20);
@@ -323,7 +331,7 @@ var commands = {
 		}
 	},
 	">give": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			var monkey = suffix.match(/\"(.*?)\"/)[1].toLowerCase();
 			suffix = suffix.split(";");
 			var atk = suffix[1].split(","); atk = atk[1] ? [parseInt(atk[0]), parseInt(atk[1])] : parseInt(atk[0]);
@@ -338,19 +346,19 @@ var commands = {
 		}
 	},
 	">clone": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			var monkey = suffix.match(/\"(.*?)\"/)[1];
 			Log[msg.mentions[1].id].mons[monkey] = (Log[msg.mentions[0].id].mons[monkey]);
 		}
 	},
 	">release": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			var monkey = suffix.match(/\"(.*?)\"/)[1];
 			delete Log[msg.mentions[0].id].mons[monkey];
 		}
 	},
 	">modify": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			var monkey = suffix.match(/\"(.*?)\"/)[1];
 			suffix = suffix.split(";");
 			switch(suffix[1]){
@@ -367,19 +375,19 @@ var commands = {
 		}
 	},
 	">cheat": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			cheatEff = suffix.split(";")[0];
 			cheatDmg = suffix.split(";")[1];
 		}
 	},
 	"!encounter": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			//var amount = (suffix >>> 0 === parseFloat(suffix) ? parseFloat(suffix) : false);
 			//var clear = ((amount && Log[msg.author.id].wildMon) ? false : true);
 			var clear = true;
 			//Log[msg.author.id].items.bait -= amount;
 			if(clear === true){
-				//bot.sendMessage(msg.channel.id, Trans[Config.lang].baitPlaced.replace(/_NUM0_/, amount));
+				//bot.sendMessage(Trans[Config.lang].baitPlaced.replace(/_NUM0_/, amount));
 				Log[msg.author.id].wildMon = new game.createMon("",[500,1000],[500,1000],[500,1000],[500,1000],[500,1000]);
 				console.log(Log[msg.author.id].wildMon);
 				var send = "";
@@ -387,25 +395,25 @@ var commands = {
 					if(key === 'mod') break;
 					send += key + ": " + Log[msg.author.id].wildMon[key] + "; ";
 				}
-				bot.sendMessage(msg.channel.id, "A wild mon took the bait! Catch it?\n" + send);
+				msg.channel.sendMessage("A wild mon took the bait! Catch it?\n" + send);
 			}
 			else{
-				bot.sendMessage(msg.channel.id, Trans[Config.lang].noBaitPlaced);
+				msg.channel.sendMessage(Trans[Config.lang].noBaitPlaced);
 			}
 		}
 	},
 	"!catch": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			return null;
 		}
 	},
 	"!feed": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			return null;
 		}
 	},
 	"$shop": {
-		process: function(bot, msg, suffix) {
+		process: function(msg, suffix) {
 			suffix = suffix.split(" ");
 			item = suffix[1];
 			amount = suffix[0] >>> 0 === parseFloat(suffix[0]) ? parseFloat(suffix[0]) : false;
@@ -414,7 +422,7 @@ var commands = {
 					Log[msg.author.id].items[item] += amount;
 				}
 				else{
-					bot.sendMessage(msg.channel.id, Trans[Config.lang].notEnoughMoney.replace(/_MONEY_/, Config.moneyName));
+					msg.channel.sendMessage(Trans[Config.lang].notEnoughMoney.replace(/_MONEY_/, Config.moneyName));
 				}
 			}
 		}
@@ -589,7 +597,7 @@ var game = {
 					games[channel].players[1].mon, 
 					games[channel].players[0].mon
 				);	
-				bot.sendMessage(channel, games[channel].queue);
+				msg.channel.sendMessage(channel, games[channel].queue).then(rmsg => rmsg.delete(30000));
 				games[channel].queue = "";
 				if (games[channel].ended === true) {
 					game.endGame(channel);
@@ -829,11 +837,11 @@ var logs = {
 	"backup": function () {
 		var date = new Date();
 		fs.access("./logs/"+date.yyyymmdd()+"log.json", err => {
-			if(err){ //fiel doesn't exist
+			if(err){ //file doesn't exist
 				fs.createReadStream('log.json').pipe(fs.createWriteStream("./logs/"+date.yyyymmdd()+"log.json"));
 			}
 			else {
-				console.log('file exists');
+				//console.log('file exists');
 			}
 		});
 	},
@@ -864,5 +872,7 @@ Date.prototype.yyyymmdd = function() {
 	return [this.getFullYear(), !mm[1] && '0', mm, !dd[1] && '0', dd].join(''); // padding
 };
 
-logs.timer = setInterval(logs.save, 300000);
-bot.login(Config.email, Config.password);
+logs.timer = setInterval(logs.save, 1200000);
+bot.login(Config.token);
+
+
